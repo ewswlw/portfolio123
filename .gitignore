@@ -1,0 +1,11 @@
+# Local encrypted secrets and plaintext environment files
+secrets/*.clixml
+.env
+.env.*
+!.env.example
+
+# Generated Portfolio123 outputs
+p123-output/
+
+# Local Codex session/cache metadata
+.codex/
