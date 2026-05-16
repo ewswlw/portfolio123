@@ -130,6 +130,8 @@ Use filenames that include the operation and date, for example:
 - `ai_factor_models_top_YYYYMMDD.csv`
 - `strategy_validation_<strategy-id>_YYYYMMDD.json`
 
+Every newly created Markdown file must show its creation date and time at the top. For plain Markdown, make the first line `Created: YYYY-MM-DD HH:MM <timezone>`. For Markdown files with YAML frontmatter, include `created_at: YYYY-MM-DD HH:MM <timezone>` inside the frontmatter.
+
 Avoid writing generated artifacts into skill folders or the user's home directory.
 
 ## Compound Engineering
