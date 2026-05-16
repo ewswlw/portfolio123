@@ -166,4 +166,6 @@ Keep every Portfolio123 object created by agents prefixed with `codex_` unless t
 - Project-local P123 credentials are stored in a Windows DPAPI encrypted file and loaded through scripts/Import-Portfolio123Secrets.ps1; agents must not print secret values.
 - Portfolio123 account objects created by agents must use the `codex_` prefix unless the user explicitly confirms a different name.
 - Before non-trivial Portfolio123 work, agents should search `docs/solutions/` for compounded P123 workflow learnings.
+- This workspace is a Git repository on branch `main`; `.codex/`, `p123-output/`, and `secrets/` are intentionally ignored.
+- For Portfolio123 live `AIFactor(...)` strategy tests, predictor existence or dataset history does not imply full-history backtestability; verify the accepted native simulation window and consult the AI Factor validation workflow learning.
 
