@@ -59,6 +59,101 @@ GOAL = {
     ],
 }
 
+DYNAMIC_GOAL = {
+    "name": "dynamic_p123_strategy_book",
+    "created_at": datetime.now().astimezone().strftime("%Y-%m-%d %H:%M %Z"),
+    "description": (
+        "Design API-estimated dynamic Portfolio123 Strategy Book candidates using "
+        "expanded pre-2007 strategy discovery, P123-native timing signals, "
+        "conditional inverse ETF exposure, and a tactical ETF component."
+    ),
+    "thresholds": {
+        "cagr_min": 0.20,
+        "sharpe_min": 2.00,
+        "max_drawdown_min": -0.25,
+        "psr_min": 0.95,
+        "dsr_min": 0.95,
+    },
+    "constraints": {
+        "candidate_strategy_sharpe_gt": 1.0,
+        "candidate_strategy_inception_before": "2007-01-01",
+        "allow_inverse_etfs": True,
+        "allow_leveraged_etfs": False,
+        "final_label": "API-estimated nomination only; native P123 Strategy Book validation required",
+        "object_prefix": "codex_",
+    },
+    "survivor_ideas": [
+        "risk_on_risk_off_overlay",
+        "conditional_inverse_bear_sleeve",
+        "codex_tactical_etf_rotation_component",
+        "expanded_pre_2007_strategy_discovery",
+        "macro_stress_gate_with_p123_fred_constants",
+        "api_screening_then_native_tier_1_validation",
+        "small_timing_signal_ensemble",
+    ],
+    "trial_accounting": {
+        "discovery_source": "each distinct SIM/category/source inspected",
+        "timing_rule": "each binary timing rule variant tested",
+        "timing_ensemble": "each ensemble exposure rule tested",
+        "etf_component": "each tactical ETF component variant tested",
+        "allocation": "each optimizer row tested",
+    },
+}
+
+TECHNICAL_TIMING_RULES = [
+    {
+        "name": "bench_above_200d",
+        "formula_intent": "Close(0,#Bench) > SMA(200,0,#Bench)",
+        "warmup_bars": 200,
+        "trial_count": 1,
+    },
+    {
+        "name": "bench_50d_above_200d",
+        "formula_intent": "SMA(50,0,#Bench) > SMA(200,0,#Bench)",
+        "warmup_bars": 200,
+        "trial_count": 1,
+    },
+    {
+        "name": "bench_12m_momentum_positive",
+        "formula_intent": "Close(0,#Bench) / Close(251,#Bench) - 1 > 0",
+        "warmup_bars": 252,
+        "trial_count": 1,
+    },
+    {
+        "name": "bench_drawdown_under_20pct",
+        "formula_intent": "Close(0,#Bench) / HiValue(252,0,#Bench) > 0.80",
+        "warmup_bars": 252,
+        "trial_count": 1,
+    },
+    {
+        "name": "bench_volatility_below_median",
+        "formula_intent": "Volatility(63,#Bench) below trailing median",
+        "warmup_bars": 252,
+        "trial_count": 1,
+    },
+]
+
+MACRO_STRESS_CANDIDATES = [
+    {
+        "name": "yield_curve_not_inverted",
+        "formula_intent": "##UST10YR - ##UST2YR > 0",
+        "status": "requires_p123_macro_series_confirmation",
+        "trial_count": 0,
+    },
+    {
+        "name": "credit_spread_not_widening",
+        "formula_intent": "##CORPBBOAS below trailing stress threshold",
+        "status": "requires_p123_macro_series_confirmation",
+        "trial_count": 0,
+    },
+    {
+        "name": "inflation_pressure_not_rising",
+        "formula_intent": "##CPI trend not accelerating",
+        "status": "requires_p123_macro_series_confirmation",
+        "trial_count": 0,
+    },
+]
+
 
 ETF_SEEDS = [
     # Broad US equity
@@ -186,6 +281,44 @@ def init_goal(run_date: str = TODAY) -> None:
     )
 
 
+def validate_dynamic_goal(goal: dict[str, Any]) -> None:
+    required_ideas = {
+        "risk_on_risk_off_overlay",
+        "conditional_inverse_bear_sleeve",
+        "codex_tactical_etf_rotation_component",
+        "expanded_pre_2007_strategy_discovery",
+        "macro_stress_gate_with_p123_fred_constants",
+        "api_screening_then_native_tier_1_validation",
+        "small_timing_signal_ensemble",
+    }
+    missing = required_ideas - set(goal.get("survivor_ideas", []))
+    if missing:
+        raise ValueError(f"Dynamic goal missing survivor ideas: {', '.join(sorted(missing))}")
+    constraints = goal.get("constraints", {})
+    if constraints.get("allow_leveraged_etfs"):
+        raise ValueError("Dynamic plan excludes leveraged and leveraged-inverse ETFs")
+    thresholds = goal.get("thresholds", {})
+    for key in ["cagr_min", "sharpe_min", "max_drawdown_min", "psr_min", "dsr_min"]:
+        if key not in thresholds:
+            raise ValueError(f"Dynamic goal missing threshold: {key}")
+
+
+def init_dynamic_goal(run_date: str = TODAY) -> None:
+    ensure_output_dir()
+    validate_dynamic_goal(DYNAMIC_GOAL)
+    goal_path = dated_path("dynamic_goal_strategy_book", "json", run_date)
+    write_json(goal_path, DYNAMIC_GOAL)
+    append_iteration(
+        "U1 Dynamic Goal And Trial Accounting",
+        [
+            f"- Wrote `{goal_path.as_posix()}`.",
+            "- Captured all seven dynamic ideation survivors.",
+            "- Trial accounting now explicitly includes discovery sources, timing rules, timing ensembles, ETF component variants, and allocation rows.",
+            "- Dynamic results remain API-estimated nominations until native Portfolio123 Strategy Book validation.",
+        ],
+    )
+
+
 def parse_float(text: str | None) -> float | None:
     if text is None:
         return None
@@ -286,6 +419,82 @@ def filter_discovery(input_path: Path, run_date: str = TODAY) -> None:
             f"- Wrote `{csv_path.as_posix()}` and `{json_path.as_posix()}`.",
             f"- Included {included_count} strategies with displayed Sharpe > 1 and inception before 2007.",
             "- Browser/table values remain discovery-only and do not feed final performance metrics.",
+        ],
+    )
+
+
+def merge_expanded_discovery(input_paths: list[Path], run_date: str = TODAY) -> None:
+    if not input_paths:
+        raise SystemExit("At least one discovery JSON file is required")
+    by_id: dict[str, dict[str, Any]] = {}
+    for input_path in input_paths:
+        source = input_path.stem
+        for raw in load_discovery_rows(input_path):
+            strategy_id = str(raw.get("strategy_id") or raw.get("id") or "").strip()
+            if not strategy_id:
+                continue
+            name = str(raw.get("name") or raw.get("strategy_name") or "")
+            sharpe = parse_float(str(raw.get("sharpe") or raw.get("displayed_sharpe") or ""))
+            inception = normalize_date(str(raw.get("inception_date") or raw.get("inception") or ""))
+            included, reason = include_strategy(sharpe, inception)
+            existing = by_id.get(strategy_id)
+            if existing is None:
+                by_id[strategy_id] = {
+                    "strategy_id": strategy_id,
+                    "name": name,
+                    "displayed_sharpe": sharpe,
+                    "inception_date": inception,
+                    "included": included,
+                    "reason": reason,
+                    "sources": source,
+                    "source_count": 1,
+                    "raw_text": str(raw.get("raw_text") or raw.get("text") or "")[:500],
+                }
+            else:
+                sources = set(str(existing.get("sources", "")).split("|"))
+                sources.add(source)
+                existing["sources"] = "|".join(sorted(filter(None, sources)))
+                existing["source_count"] = len(sources)
+                if existing.get("displayed_sharpe") is None and sharpe is not None:
+                    existing["displayed_sharpe"] = sharpe
+                if existing.get("inception_date") is None and inception is not None:
+                    existing["inception_date"] = inception
+                included, reason = include_strategy(existing.get("displayed_sharpe"), existing.get("inception_date"))
+                existing["included"] = included
+                existing["reason"] = reason
+    rows_out = sorted(by_id.values(), key=lambda row: row["strategy_id"])
+    fieldnames = [
+        "strategy_id",
+        "name",
+        "displayed_sharpe",
+        "inception_date",
+        "included",
+        "reason",
+        "sources",
+        "source_count",
+        "raw_text",
+    ]
+    csv_path = dated_path("expanded_strategy_discovery", "csv", run_date)
+    json_path = dated_path("expanded_strategy_discovery", "json", run_date)
+    write_csv(csv_path, rows_out, fieldnames)
+    write_json(
+        json_path,
+        {
+            "rows": rows_out,
+            "input_files": [path.as_posix() for path in input_paths],
+            "discovery_sources_count": len(input_paths),
+            "included_count": sum(1 for row in rows_out if row.get("included")),
+            "trial_count_contribution": len(input_paths),
+            "note": "Browser/SIM values are discovery-only; performance validation must use API or native P123 outputs.",
+        },
+    )
+    append_iteration(
+        "U2 Expanded Strategy Discovery",
+        [
+            f"- Merged {len(input_paths)} discovery sources into `{csv_path.as_posix()}` and `{json_path.as_posix()}`.",
+            f"- Unique strategies discovered: {len(rows_out)}.",
+            f"- Included strategies after displayed Sharpe > 1 and inception before 2007 filter: {sum(1 for row in rows_out if row.get('included'))}.",
+            "- Discovery-source count is recorded as part of dynamic trial accounting.",
         ],
     )
 
@@ -520,6 +729,204 @@ def price_returns(price_file: Path | None = None, run_date: str = TODAY) -> None
     )
 
 
+def load_return_panel(path: Path | None = None) -> pd.DataFrame:
+    path = path or latest_file("return_panel", "csv")
+    returns = pd.read_csv(path, parse_dates=["date"]).set_index("date").sort_index()
+    returns = returns.apply(pd.to_numeric, errors="coerce")
+    return returns.dropna(axis=1, how="all").dropna(how="all")
+
+
+def choose_benchmark_column(returns: pd.DataFrame) -> str:
+    for candidate in ["SPY", "IWB", "QQQ"]:
+        if candidate in returns.columns:
+            return candidate
+    equity_cols = [col for col in returns.columns if not col.startswith("strategy_")]
+    if equity_cols:
+        return equity_cols[0]
+    raise ValueError("No ETF/benchmark-like column is available for timing signals")
+
+
+def equity_curve(return_series: pd.Series) -> pd.Series:
+    return (1 + return_series.fillna(0)).cumprod()
+
+
+def build_timing_signals(return_file: Path | None = None, run_date: str = TODAY) -> None:
+    return_file = return_file or latest_file("return_panel", "csv")
+    returns = load_return_panel(return_file)
+    benchmark = choose_benchmark_column(returns)
+    close = equity_curve(returns[benchmark])
+    prior_close = close.shift(1)
+    sma_50 = close.rolling(50, min_periods=50).mean().shift(1)
+    sma_200 = close.rolling(200, min_periods=200).mean().shift(1)
+    mom_252 = close.pct_change(252).shift(1)
+    high_252 = close.rolling(252, min_periods=252).max().shift(1)
+    drawdown = prior_close / high_252 - 1
+    vol_63 = returns[benchmark].rolling(63, min_periods=63).std().shift(1) * math.sqrt(252)
+    vol_median = vol_63.rolling(252, min_periods=126).median().shift(1)
+    signals = pd.DataFrame(index=returns.index)
+    signals["bench_above_200d"] = (prior_close > sma_200).where(prior_close.notna() & sma_200.notna())
+    signals["bench_50d_above_200d"] = (sma_50 > sma_200).where(sma_50.notna() & sma_200.notna())
+    signals["bench_12m_momentum_positive"] = (mom_252 > 0).where(mom_252.notna())
+    signals["bench_drawdown_under_20pct"] = (drawdown > -0.20).where(drawdown.notna())
+    signals["bench_volatility_below_median"] = (vol_63 < vol_median).where(vol_63.notna() & vol_median.notna())
+    signals = signals.dropna(how="all")
+    signals = signals.astype("boolean")
+    valid = signals.notna().all(axis=1)
+    signals = signals.loc[valid].astype(int)
+    signal_cols = [rule["name"] for rule in TECHNICAL_TIMING_RULES]
+    signals["risk_on_votes"] = signals[signal_cols].sum(axis=1)
+    signals["ensemble_exposure"] = signals["risk_on_votes"].map(
+        lambda votes: 1.0 if votes >= 4 else 0.6 if votes == 3 else 0.3 if votes == 2 else 0.0
+    )
+    signals["inverse_enabled"] = (signals["risk_on_votes"] <= 2).astype(int)
+    signals.to_csv(dated_path("timing_signal_panel", "csv", run_date), index_label="date")
+    summary = {
+        "source_return_panel": return_file.as_posix(),
+        "benchmark_column": benchmark,
+        "start": signals.index.min().date().isoformat() if not signals.empty else None,
+        "end": signals.index.max().date().isoformat() if not signals.empty else None,
+        "rows": int(len(signals)),
+        "technical_rules": TECHNICAL_TIMING_RULES,
+        "macro_candidates": MACRO_STRESS_CANDIDATES,
+        "trial_count_contribution": sum(rule["trial_count"] for rule in TECHNICAL_TIMING_RULES) + 1,
+        "lookahead_guard": "Signals are shifted one bar so date t allocation uses information available before date t return.",
+        "macro_note": "Macro candidates are documented but not activated until P123 macro series availability and point-in-time behavior are confirmed.",
+    }
+    write_json(dated_path("timing_signal_summary", "json", run_date), summary)
+    append_iteration(
+        "U3 P123-Native Timing Signal Panel",
+        [
+            f"- Built timing signals from `{return_file.as_posix()}` using `{benchmark}` as benchmark proxy.",
+            f"- Signal window: {summary['start']} to {summary['end']} across {summary['rows']} rows.",
+            "- Technical timing rules are shifted one bar to avoid same-day look-ahead.",
+            "- Macro stress candidates are documented but not activated pending P123 macro-series confirmation.",
+        ],
+    )
+
+
+def defensive_proxy(returns: pd.DataFrame) -> pd.Series:
+    for candidate in ["SHY", "IEF", "AGG"]:
+        if candidate in returns.columns:
+            return returns[candidate].fillna(0)
+    return pd.Series(0.0, index=returns.index)
+
+
+def average_available(returns: pd.DataFrame, columns: list[str]) -> pd.Series:
+    available = [col for col in columns if col in returns.columns]
+    if not available:
+        return pd.Series(0.0, index=returns.index)
+    return returns[available].mean(axis=1).fillna(0)
+
+
+def tactical_rotation_returns(returns: pd.DataFrame, signals: pd.DataFrame) -> tuple[pd.Series, pd.DataFrame]:
+    risk_on_bucket = [col for col in ["SPY", "QQQ", "IWM", "EFA", "EEM", "MDY", "IWF"] if col in returns.columns]
+    defensive_bucket = [col for col in ["SHY", "IEF", "TLT", "AGG", "LQD", "GLD"] if col in returns.columns]
+    inverse_bucket = [col for col in ["SH", "DOG", "PSQ"] if col in returns.columns]
+    candidate_cols = sorted(set(risk_on_bucket + defensive_bucket + inverse_bucket))
+    if not candidate_cols:
+        return pd.Series(0.0, index=returns.index, name="tactical_etf_component"), pd.DataFrame()
+    momentum = (1 + returns[candidate_cols].fillna(0)).rolling(252, min_periods=126).apply(np.prod, raw=True) - 1
+    momentum = momentum.shift(1)
+    vol = returns[candidate_cols].rolling(63, min_periods=42).std().shift(1) * math.sqrt(252)
+    score = momentum - vol
+    picks: list[dict[str, Any]] = []
+    component = pd.Series(0.0, index=returns.index, name="tactical_etf_component")
+    aligned_signals = signals.reindex(returns.index).ffill()
+    for dt in returns.index:
+        row_signal = aligned_signals.loc[dt]
+        if row_signal.get("inverse_enabled", 0) == 1 and inverse_bucket:
+            bucket_name = "inverse"
+            bucket = inverse_bucket
+        elif row_signal.get("ensemble_exposure", 0) >= 0.6 and risk_on_bucket:
+            bucket_name = "risk_on"
+            bucket = risk_on_bucket
+        else:
+            bucket_name = "defensive"
+            bucket = defensive_bucket or risk_on_bucket
+        score_row = score.loc[dt, bucket].dropna()
+        if score_row.empty:
+            picked = bucket[0] if bucket else None
+        else:
+            picked = str(score_row.idxmax())
+        component.loc[dt] = returns.at[dt, picked] if picked in returns.columns else 0.0
+        picks.append({"date": dt.date().isoformat(), "bucket": bucket_name, "ticker": picked})
+    picks_frame = pd.DataFrame(picks)
+    return component, picks_frame
+
+
+def build_dynamic_panel(
+    return_file: Path | None = None,
+    timing_file: Path | None = None,
+    run_date: str = TODAY,
+) -> None:
+    return_file = return_file or latest_file("return_panel", "csv")
+    timing_file = timing_file or latest_file("timing_signal_panel", "csv")
+    returns = load_return_panel(return_file)
+    signals = pd.read_csv(timing_file, parse_dates=["date"]).set_index("date").sort_index()
+    common_index = returns.index.intersection(signals.index)
+    returns = returns.loc[common_index]
+    signals = signals.loc[common_index]
+    defensive = defensive_proxy(returns)
+    dynamic = pd.DataFrame(index=common_index)
+    strategy_cols = [col for col in returns.columns if col.startswith("strategy_")]
+    for col in strategy_cols:
+        dynamic[col] = returns[col]
+        dynamic[f"{col}_timed_200d"] = np.where(
+            signals["bench_above_200d"].astype(bool),
+            returns[col],
+            defensive,
+        )
+        exposure = signals["ensemble_exposure"].astype(float)
+        dynamic[f"{col}_timed_ensemble"] = exposure * returns[col] + (1 - exposure) * defensive
+    inverse_avg = average_available(returns, ["SH", "DOG", "PSQ"])
+    dynamic["conditional_inverse_sleeve"] = np.where(
+        signals["inverse_enabled"].astype(bool),
+        inverse_avg,
+        defensive,
+    )
+    tactical, picks = tactical_rotation_returns(returns, signals)
+    dynamic["tactical_etf_component"] = tactical
+    dynamic["defensive_proxy_component"] = defensive
+    dynamic = dynamic.dropna(how="any")
+    dynamic.to_csv(dated_path("dynamic_return_panel", "csv", run_date), index_label="date")
+    candidate_rows = []
+    if not picks.empty:
+        pick_counts = picks.groupby(["bucket", "ticker"]).size().reset_index(name="days")
+        candidate_rows = pick_counts.to_dict(orient="records")
+    candidate_rows.append(
+        {
+            "bucket": "conditional_inverse",
+            "ticker": "SH|DOG|PSQ",
+            "days": int(signals["inverse_enabled"].sum()),
+            "signal_dependency": "inverse_enabled",
+        }
+    )
+    write_csv(dated_path("tactical_etf_component_candidates", "csv", run_date), candidate_rows)
+    summary = {
+        "source_return_panel": return_file.as_posix(),
+        "source_timing_panel": timing_file.as_posix(),
+        "start": dynamic.index.min().date().isoformat() if not dynamic.empty else None,
+        "end": dynamic.index.max().date().isoformat() if not dynamic.empty else None,
+        "rows": int(len(dynamic)),
+        "components": list(dynamic.columns),
+        "raw_strategy_components": strategy_cols,
+        "conditional_inverse_days": int(signals["inverse_enabled"].sum()),
+        "tactical_component": "tactical_etf_component",
+        "defensive_component": "defensive_proxy_component",
+        "trial_count_contribution": len(strategy_cols) * 2 + 2,
+    }
+    write_json(dated_path("dynamic_return_panel_summary", "json", run_date), summary)
+    append_iteration(
+        "U4-U5 Dynamic Panel And Tactical ETF Component",
+        [
+            f"- Built dynamic panel from `{return_file.as_posix()}` and `{timing_file.as_posix()}`.",
+            f"- Dynamic window: {summary['start']} to {summary['end']} across {summary['rows']} rows.",
+            f"- Added timed variants for {len(strategy_cols)} strategy streams, one conditional inverse sleeve, and one tactical ETF component.",
+            "- Conditional inverse exposure is active only when the timing ensemble marks inverse-enabled risk-off days.",
+        ],
+    )
+
+
 def annualized_metrics(returns: pd.Series, periods_per_year: int = 252) -> dict[str, float]:
     clean = returns.dropna()
     if clean.empty:
@@ -531,6 +938,33 @@ def annualized_metrics(returns: pd.Series, periods_per_year: int = 252) -> dict[
     sharpe = float(clean.mean() * periods_per_year / vol) if vol and not math.isnan(vol) else math.nan
     drawdown = equity / equity.cummax() - 1
     return {"cagr": cagr, "sharpe": sharpe, "max_drawdown": float(drawdown.min())}
+
+
+def walk_forward_positive_rate(returns: pd.Series, window: int = 252) -> float:
+    clean = returns.dropna()
+    if len(clean) < window:
+        return math.nan
+    positives = []
+    for start in range(0, len(clean) - window + 1, window):
+        chunk = clean.iloc[start : start + window]
+        positives.append(annualized_metrics(chunk)["cagr"] > 0)
+    return float(sum(positives) / len(positives)) if positives else math.nan
+
+
+def crisis_window_drawdowns(returns: pd.Series) -> dict[str, float]:
+    windows = {
+        "crisis_2008": ("2008-01-01", "2009-03-31"),
+        "crisis_2011": ("2011-07-01", "2011-12-31"),
+        "crisis_2018q4": ("2018-10-01", "2018-12-31"),
+        "crisis_2020": ("2020-02-01", "2020-04-30"),
+        "crisis_2022": ("2022-01-01", "2022-12-31"),
+    }
+    out: dict[str, float] = {}
+    clean = returns.dropna()
+    for name, (start, end) in windows.items():
+        window = clean.loc[(clean.index >= pd.Timestamp(start)) & (clean.index <= pd.Timestamp(end))]
+        out[f"{name}_drawdown"] = annualized_metrics(window)["max_drawdown"] if not window.empty else math.nan
+    return out
 
 
 def normal_cdf(x: float) -> float:
@@ -687,6 +1121,9 @@ def optimize_panel(
         raise SystemExit("Need at least two return streams to optimize")
     etfs = json.loads(etf_file.read_text(encoding="utf-8"))["rows"]
     inverse_flags = {row["ticker"]: bool(row.get("inverse")) for row in etfs}
+    for col in returns.columns:
+        if col.startswith("conditional_inverse"):
+            inverse_flags[col] = True
     trials: list[dict[str, Any]] = []
     n = 0
     methods = [
@@ -801,6 +1238,9 @@ def optimize_panel(
         weights = cap_weights(raw_weights, inverse_flags)
         port = returns[weights.index].mul(weights, axis=1).sum(axis=1)
         metrics = annualized_metrics(port, periods_per_year)
+        crisis = crisis_window_drawdowns(port)
+        worst_crisis_drawdown = min([value for value in crisis.values() if not math.isnan(value)], default=math.nan)
+        walk_forward_positive = walk_forward_positive_rate(port, periods_per_year)
         psr_value = psr(port, 0.0, periods_per_year)
         dsr_value = dsr(port, n, periods_per_year)
         inverse_weight = float(sum(weights.get(col, 0.0) for col, flag in inverse_flags.items() if flag))
@@ -834,6 +1274,8 @@ def optimize_panel(
                 "cagr": metrics["cagr"],
                 "sharpe": metrics["sharpe"],
                 "max_drawdown": metrics["max_drawdown"],
+                "walk_forward_positive_rate": walk_forward_positive,
+                "worst_crisis_drawdown": worst_crisis_drawdown,
                 "psr": psr_value,
                 "dsr": dsr_value,
                 "gate_status": gate_status,
@@ -875,11 +1317,14 @@ def generate_report(ledger_file: Path | None = None, run_date: str = TODAY, arti
         "cagr",
         "sharpe",
         "max_drawdown",
+        "walk_forward_positive_rate",
+        "worst_crisis_drawdown",
         "psr",
         "dsr",
         "inverse_weight",
         "weights",
     ]
+    display_cols = [col for col in display_cols if col in ledger.columns]
     for frame in [best, winners]:
         if frame.empty:
             continue
@@ -937,14 +1382,305 @@ def generate_report(ledger_file: Path | None = None, run_date: str = TODAY, arti
     )
 
 
+def dynamic_optimize(
+    return_file: Path | None = None,
+    etf_file: Path | None = None,
+    run_date: str = TODAY,
+) -> None:
+    return_file = return_file or latest_file("dynamic_return_panel", "csv")
+    returns = load_return_panel(return_file)
+    if returns.shape[1] < 2:
+        raise SystemExit("Need at least two dynamic return streams to optimize")
+    inverse_flags = {col: col.startswith("conditional_inverse") for col in returns.columns}
+    methods: list[tuple[str, pd.Series]] = [
+        ("dynamic_equal_weight", equal_weights(returns)),
+        ("dynamic_inverse_volatility", inverse_vol_weights(returns)),
+        ("dynamic_hrp", hrp_weights(returns)),
+    ]
+    strategy_modes = {
+        "raw": [col for col in returns.columns if col.startswith("strategy_") and "_timed_" not in col],
+        "timed_200d": [col for col in returns.columns if col.endswith("_timed_200d")],
+        "timed_ensemble": [col for col in returns.columns if col.endswith("_timed_ensemble")],
+    }
+    tactical_cols = [col for col in ["tactical_etf_component"] if col in returns.columns]
+    inverse_cols = [col for col in ["conditional_inverse_sleeve"] if col in returns.columns]
+    defensive_cols = [col for col in ["defensive_proxy_component"] if col in returns.columns]
+    for mode_name, strategy_cols in strategy_modes.items():
+        if not strategy_cols:
+            continue
+        for strategy_total in [round(x, 2) for x in np.arange(0.55, 0.901, 0.05)]:
+            for inverse_total in [round(x, 3) for x in np.arange(0.00, 0.151, 0.025)]:
+                for tactical_total in [round(x, 2) for x in np.arange(0.00, 0.201, 0.05)]:
+                    defensive_total = 1 - strategy_total - inverse_total - tactical_total
+                    if defensive_total < -1e-9:
+                        continue
+                    weights = pd.Series(0.0, index=returns.columns)
+                    weights[strategy_cols] = strategy_total / len(strategy_cols)
+                    if inverse_cols and inverse_total > 0:
+                        weights[inverse_cols] = inverse_total / len(inverse_cols)
+                    if tactical_cols and tactical_total > 0:
+                        weights[tactical_cols] = tactical_total / len(tactical_cols)
+                    if defensive_cols and defensive_total > 0:
+                        weights[defensive_cols] = defensive_total / len(defensive_cols)
+                    methods.append(
+                        (
+                            (
+                                f"dynamic_grid_{mode_name}_s{strategy_total:.2f}_"
+                                f"inv{inverse_total:.2f}_taa{tactical_total:.2f}_"
+                                f"def{max(0.0, defensive_total):.2f}"
+                            ),
+                            weights,
+                        )
+                    )
+    thresholds = DYNAMIC_GOAL["thresholds"]
+    trials: list[dict[str, Any]] = []
+    for n, (method, raw_weights) in enumerate(methods, start=1):
+        weights = cap_weights(raw_weights, inverse_flags)
+        port = returns[weights.index].mul(weights, axis=1).sum(axis=1)
+        metrics = annualized_metrics(port)
+        crisis = crisis_window_drawdowns(port)
+        worst_crisis_drawdown = min([value for value in crisis.values() if not math.isnan(value)], default=math.nan)
+        psr_value = psr(port, 0.0)
+        dsr_value = dsr(port, n)
+        walk_forward_positive = walk_forward_positive_rate(port)
+        inverse_weight = float(sum(weights.get(col, 0.0) for col, flag in inverse_flags.items() if flag))
+        failure_reasons = []
+        if not metrics["cagr"] > thresholds["cagr_min"]:
+            failure_reasons.append("cagr")
+        if not metrics["sharpe"] > thresholds["sharpe_min"]:
+            failure_reasons.append("sharpe")
+        if not metrics["max_drawdown"] > thresholds["max_drawdown_min"]:
+            failure_reasons.append("max_drawdown")
+        if not psr_value >= thresholds["psr_min"]:
+            failure_reasons.append("psr")
+        if not dsr_value >= thresholds["dsr_min"]:
+            failure_reasons.append("dsr")
+        gate_status = "pass" if not failure_reasons else "fail"
+        trials.append(
+            {
+                "n_trials_index": n,
+                "optimizer_family": method,
+                "components": "|".join(weights.index),
+                "weights": json.dumps({k: round(float(v), 6) for k, v in weights.items()}, sort_keys=True),
+                "inverse_weight": inverse_weight,
+                "cagr": metrics["cagr"],
+                "sharpe": metrics["sharpe"],
+                "max_drawdown": metrics["max_drawdown"],
+                "walk_forward_positive_rate": walk_forward_positive,
+                "worst_crisis_drawdown": worst_crisis_drawdown,
+                "psr": psr_value,
+                "dsr": dsr_value,
+                "gate_status": gate_status,
+                "decision_reason": "all_gates_pass" if gate_status == "pass" else "failed_" + "_".join(failure_reasons),
+                "validation_tier": "API-estimated",
+                "cagr_gate": thresholds["cagr_min"],
+                "sharpe_gate": thresholds["sharpe_min"],
+                "max_drawdown_gate": thresholds["max_drawdown_min"],
+            }
+        )
+    ledger_csv = dated_path("dynamic_trial_ledger", "csv", run_date)
+    ledger_json = dated_path("dynamic_trial_ledger", "json", run_date)
+    write_csv(ledger_csv, trials)
+    write_json(
+        ledger_json,
+        {
+            "rows": trials,
+            "source_return_panel": return_file.as_posix(),
+            "n_trials": len(trials),
+            "thresholds": thresholds,
+            "search_shape": "Narrow pre-registered dynamic grid across raw/timed strategy modes, conditional inverse sleeve, tactical ETF component, and defensive proxy.",
+        },
+    )
+    append_iteration(
+        "U6 Dynamic Optimizer And Promotion Gates",
+        [
+            f"- Optimized `{return_file.as_posix()}` using a narrow pre-registered dynamic grid.",
+            f"- Wrote `{ledger_csv.as_posix()}` and `{ledger_json.as_posix()}`.",
+            f"- Trials: {len(trials)}; passing allocations: {sum(1 for trial in trials if trial['gate_status'] == 'pass')}.",
+            f"- Gates: CAGR > {thresholds['cagr_min']:.2%}, Sharpe > {thresholds['sharpe_min']:.2f}, max drawdown > {thresholds['max_drawdown_min']:.2%}.",
+        ],
+    )
+
+
+def generate_dynamic_report(ledger_file: Path | None = None, run_date: str = TODAY) -> None:
+    ledger_file = ledger_file or latest_file("dynamic_trial_ledger", "csv")
+    ledger = pd.read_csv(ledger_file)
+    if ledger.empty:
+        raise SystemExit("Dynamic trial ledger is empty")
+    winners = ledger[ledger["gate_status"] == "pass"].copy()
+    sort_cols = ["sharpe", "cagr"]
+    if not winners.empty:
+        winners = winners.sort_values(sort_cols, ascending=[False, False]).head(10)
+        report_path = dated_path("dynamic_candidate_promotion_report", "md", run_date)
+        title = "Dynamic Candidate Promotion Report"
+        body = [
+            f"Created: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M %Z')}",
+            "",
+            f"# {title}",
+            "",
+            "These are API-estimated nominations only. Native Portfolio123 Strategy Book validation is required before final performance claims.",
+            "",
+            "## Promoted Candidates",
+            "",
+            winners[
+                [
+                    "n_trials_index",
+                    "optimizer_family",
+                    "cagr",
+                    "sharpe",
+                    "max_drawdown",
+                    "walk_forward_positive_rate",
+                    "worst_crisis_drawdown",
+                    "psr",
+                    "dsr",
+                    "inverse_weight",
+                    "weights",
+                ]
+            ].to_string(index=False),
+            "",
+            "## Required Native Validation",
+            "",
+            "- Create `codex_` native component strategies only after user confirmation.",
+            "- Validate the final Strategy Book in native P123 before declaring the target met.",
+        ]
+    else:
+        best = ledger.sort_values(sort_cols, ascending=[False, False]).head(10)
+        report_path = dated_path("dynamic_no_winner_report", "md", run_date)
+        body = [
+            f"Created: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M %Z')}",
+            "",
+            "# Dynamic No-Winner Report",
+            "",
+            "No API-estimated dynamic candidate passed every pre-registered gate.",
+            "",
+            "## Nearest Misses",
+            "",
+            best[
+                [
+                    "n_trials_index",
+                    "optimizer_family",
+                    "cagr",
+                    "sharpe",
+                    "max_drawdown",
+                    "walk_forward_positive_rate",
+                    "worst_crisis_drawdown",
+                    "psr",
+                    "dsr",
+                    "inverse_weight",
+                    "weights",
+                ]
+            ].to_string(index=False),
+            "",
+            "## Interpretation",
+            "",
+            "- Do not loosen CAGR, Sharpe, drawdown, PSR, or DSR gates without a new approved plan.",
+            "- Inspect whether the failure is ingredient-limited, timing-limited, or native-translation-limited before the next iteration.",
+        ]
+    report_path.write_text("\n".join(body) + "\n", encoding="utf-8")
+    append_iteration(
+        "U6 Dynamic Candidate Promotion Funnel",
+        [
+            f"- Read dynamic trial ledger `{ledger_file.as_posix()}`.",
+            f"- Wrote `{report_path.as_posix()}`.",
+            f"- Promoted API-estimated candidates: {len(winners)}.",
+        ],
+    )
+
+
+def native_validation_package(ledger_file: Path | None = None, run_date: str = TODAY) -> None:
+    ledger_file = ledger_file or latest_file("dynamic_trial_ledger", "csv")
+    ledger = pd.read_csv(ledger_file)
+    winners = ledger[ledger["gate_status"] == "pass"].sort_values(["sharpe", "cagr"], ascending=[False, False])
+    path = dated_path("native_validation_package", "md", run_date)
+    body = [
+        f"Created: {datetime.now().astimezone().strftime('%Y-%m-%d %H:%M %Z')}",
+        "",
+        "# Native Portfolio123 Validation Package",
+        "",
+        "This package prepares native validation only. It does not claim the Strategy Book target was met.",
+        "",
+        f"Source ledger: `{ledger_file.as_posix()}`",
+        "",
+    ]
+    if winners.empty:
+        body.extend(
+            [
+                "## Status",
+                "",
+                "No API-estimated dynamic candidate passed every promotion gate, so no native `codex_` object creation is recommended yet.",
+            ]
+        )
+    else:
+        winner = winners.iloc[0]
+        weights = json.loads(winner["weights"])
+        active_components = {component: float(weight) for component, weight in weights.items() if abs(float(weight)) > 1e-9}
+        proposed_objects = ["codex_dynamic_strategy_book_candidate"]
+        if any(component.endswith("_timed_200d") for component in active_components):
+            proposed_objects.append("codex_dynamic_200d_timing_overlay_components")
+        if active_components.get("tactical_etf_component", 0.0) > 0:
+            proposed_objects.append("codex_dynamic_tactical_etf_component")
+        if active_components.get("conditional_inverse_sleeve", 0.0) > 0:
+            proposed_objects.append("codex_dynamic_conditional_inverse_component")
+        body.extend(
+            [
+                "## Candidate To Validate",
+                "",
+                f"- Trial: `{int(winner['n_trials_index'])}`",
+                f"- Optimizer family: `{winner['optimizer_family']}`",
+                f"- API-estimated CAGR: {winner['cagr']:.2%}",
+                f"- API-estimated Sharpe: {winner['sharpe']:.2f}",
+                f"- API-estimated max drawdown: {winner['max_drawdown']:.2%}",
+                "",
+                "## Proposed Native Objects",
+                "",
+                *[f"- `{name}`" for name in proposed_objects],
+                "",
+                "## Allocation Weights",
+                "",
+            ]
+        )
+        for component, weight in sorted(active_components.items()):
+            body.append(f"- `{component}`: {weight:.2%}")
+        if not any(component in active_components for component in ["conditional_inverse_sleeve", "tactical_etf_component"]):
+            body.extend(
+                [
+                    "",
+                    "## Dynamic Component Note",
+                    "",
+                    "The promoted API-estimated candidate uses the 200-day timing overlay and defensive proxy. Conditional inverse and tactical ETF components were tested but did not appear in the promoted row.",
+                ]
+            )
+        body.extend(
+            [
+                "",
+                "## Confirmation Gate",
+                "",
+                "Ask the user before creating or modifying any native Portfolio123 object or running credit-heavy native validation.",
+            ]
+        )
+    path.write_text("\n".join(body) + "\n", encoding="utf-8")
+    append_iteration(
+        "U7 Native Validation Package",
+        [
+            f"- Wrote `{path.as_posix()}`.",
+            "- Package is a handoff for native P123 validation and makes no final performance claim.",
+        ],
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     p_init = sub.add_parser("init-goal")
     p_init.add_argument("--run-date", default=TODAY)
+    p_dynamic_init = sub.add_parser("init-dynamic-goal")
+    p_dynamic_init.add_argument("--run-date", default=TODAY)
     p_filter = sub.add_parser("filter-discovery")
     p_filter.add_argument("input", type=Path)
     p_filter.add_argument("--run-date", default=TODAY)
+    p_expanded = sub.add_parser("merge-expanded-discovery")
+    p_expanded.add_argument("inputs", nargs="+", type=Path)
+    p_expanded.add_argument("--run-date", default=TODAY)
     p_feas = sub.add_parser("strategy-feasibility")
     p_feas.add_argument("--discovery", type=Path)
     p_feas.add_argument("--run-date", default=TODAY)
@@ -955,6 +1691,13 @@ def main() -> None:
     p_panel = sub.add_parser("build-panel")
     p_panel.add_argument("--price-file", type=Path)
     p_panel.add_argument("--run-date", default=TODAY)
+    p_timing = sub.add_parser("build-timing-signals")
+    p_timing.add_argument("--return-file", type=Path)
+    p_timing.add_argument("--run-date", default=TODAY)
+    p_dynamic_panel = sub.add_parser("build-dynamic-panel")
+    p_dynamic_panel.add_argument("--return-file", type=Path)
+    p_dynamic_panel.add_argument("--timing-file", type=Path)
+    p_dynamic_panel.add_argument("--run-date", default=TODAY)
     p_opt = sub.add_parser("optimize")
     p_opt.add_argument("--return-file", type=Path)
     p_opt.add_argument("--etf-file", type=Path)
@@ -967,17 +1710,35 @@ def main() -> None:
     p_report.add_argument("--ledger-file", type=Path)
     p_report.add_argument("--run-date", default=TODAY)
     p_report.add_argument("--artifact-prefix", default="")
+    p_dynamic_opt = sub.add_parser("dynamic-optimize")
+    p_dynamic_opt.add_argument("--return-file", type=Path)
+    p_dynamic_opt.add_argument("--etf-file", type=Path)
+    p_dynamic_opt.add_argument("--run-date", default=TODAY)
+    p_dynamic_report = sub.add_parser("dynamic-report")
+    p_dynamic_report.add_argument("--ledger-file", type=Path)
+    p_dynamic_report.add_argument("--run-date", default=TODAY)
+    p_native_package = sub.add_parser("native-package")
+    p_native_package.add_argument("--ledger-file", type=Path)
+    p_native_package.add_argument("--run-date", default=TODAY)
     args = parser.parse_args()
     if args.command == "init-goal":
         init_goal(args.run_date)
+    elif args.command == "init-dynamic-goal":
+        init_dynamic_goal(args.run_date)
     elif args.command == "filter-discovery":
         filter_discovery(args.input, args.run_date)
+    elif args.command == "merge-expanded-discovery":
+        merge_expanded_discovery(args.inputs, args.run_date)
     elif args.command == "strategy-feasibility":
         classify_strategy_feasibility(args.discovery, args.run_date)
     elif args.command == "validate-etfs":
         validate_etf_universe(args.run_date, args.start, args.end)
     elif args.command == "build-panel":
         price_returns(args.price_file, args.run_date)
+    elif args.command == "build-timing-signals":
+        build_timing_signals(args.return_file, args.run_date)
+    elif args.command == "build-dynamic-panel":
+        build_dynamic_panel(args.return_file, args.timing_file, args.run_date)
     elif args.command == "optimize":
         optimize_panel(
             args.return_file,
@@ -990,6 +1751,12 @@ def main() -> None:
         )
     elif args.command == "report":
         generate_report(args.ledger_file, args.run_date, args.artifact_prefix)
+    elif args.command == "dynamic-optimize":
+        dynamic_optimize(args.return_file, args.etf_file, args.run_date)
+    elif args.command == "dynamic-report":
+        generate_dynamic_report(args.ledger_file, args.run_date)
+    elif args.command == "native-package":
+        native_validation_package(args.ledger_file, args.run_date)
 
 
 if __name__ == "__main__":

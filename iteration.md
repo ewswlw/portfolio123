@@ -332,3 +332,222 @@ Updated: 2026-05-22 13:06 Eastern Daylight Time
 - Read trial ledger `p123-output/strict_trial_ledger_20260522_strict_sh2_dd25.csv`.
 - Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/strict_no_winner_report_20260522_strict_sh2_dd25.md`.
 - Passing candidates: 0.
+
+## Dynamic Strategy Book Planning
+
+Updated: 2026-05-22 13:28 Eastern Daylight Time
+- User approved combining all dynamic ideation survivors:
+  - P123-native risk-on/risk-off timing overlay.
+  - Conditional inverse ETF bear sleeve.
+  - `codex_` tactical ETF rotation component.
+  - Expanded pre-2007 strategy discovery.
+  - Macro stress gate using P123 FRED constants.
+  - API-estimated screening into native Tier 1 validation.
+  - Small timing-signal ensemble instead of picking one optimized timing rule.
+- Wrote new active plan `docs/plans/2026-05-22-003-feat-dynamic-p123-strategy-book-plan.md`.
+- The plan intentionally leaves the completed static/API-only plan unchanged and treats the new phase as dynamic exposure research rather than additional static weight tuning.
+- Main planning decision: reuse the artifact-first pipeline in `scripts/p123_strategy_book_research.py`, but add dynamic artifacts with distinct filenames so prior static results remain reproducible.
+- Key validation guardrail: API-estimated dynamic results can nominate candidates only; native Portfolio123 Strategy Book simulation remains required before declaring the CAGR >20%, Sharpe >2.0, and max drawdown better than -25% target met.
+
+## Dynamic Strategy Book Execution
+
+Updated: 2026-05-22 13:49 Eastern Daylight Time
+- Implemented dynamic research commands in `scripts/p123_strategy_book_research.py`:
+  - `init-dynamic-goal`
+  - `merge-expanded-discovery`
+  - `build-timing-signals`
+  - `build-dynamic-panel`
+  - `dynamic-optimize`
+  - `dynamic-report`
+  - `native-package`
+- Added focused tests in `tests/test_p123_strategy_book_research.py`.
+- No new Portfolio123 API credits were spent in this execution pass; all dynamic calculations reused existing API-derived artifacts from `p123-output/`.
+- Generated `p123-output/dynamic_goal_strategy_book_20260522.json`.
+- Generated baseline expanded discovery artifacts from the existing captured SIM source:
+  - `p123-output/expanded_strategy_discovery_20260522.csv`
+  - `p123-output/expanded_strategy_discovery_20260522.json`
+- Current expanded discovery is only a baseline merge of the already-captured SIM source, not a full new browser discovery sweep. It still has 5 eligible pre-2007 displayed-Sharpe >1 strategies.
+- Generated timing signal artifacts:
+  - `p123-output/timing_signal_panel_20260522.csv`
+  - `p123-output/timing_signal_summary_20260522.json`
+- Timing signals use `SPY` as benchmark proxy and are shifted one bar so date `t` allocation uses information available before date `t` return.
+- Macro stress gates were documented as candidates but not activated because P123 macro-series availability and point-in-time behavior still need explicit confirmation.
+- Generated dynamic component artifacts:
+  - `p123-output/dynamic_return_panel_20260522.csv`
+  - `p123-output/dynamic_return_panel_summary_20260522.json`
+  - `p123-output/tactical_etf_component_candidates_20260522.csv`
+- Dynamic panel contains raw strategies, 200-day timed strategy variants, timing-ensemble variants, a conditional inverse sleeve, a tactical ETF component, and a defensive proxy component.
+- First coarse dynamic optimizer grid timed out at five minutes after dynamic variants expanded the component set.
+- Replaced the coarse dynamic grid with a narrower deterministic 5-point sleeve grid and counted every row in `n_trials`.
+- Generated `p123-output/dynamic_trial_ledger_20260522.csv` and `p123-output/dynamic_trial_ledger_20260522.json`.
+- Dynamic optimizer trial count: 648.
+- Passing API-estimated nominations: 1.
+- Promoted API-estimated row:
+  - Trial: 386.
+  - Optimizer family: `dynamic_grid_timed_200d_s0.80_inv0.00_taa0.00_def0.20`.
+  - Weights: 16% each to the five 200-day timed strategy variants, 20% to the defensive proxy component.
+  - API-estimated CAGR: 20.23%.
+  - API-estimated Sharpe: 2.01.
+  - API-estimated max drawdown: -12.81%.
+  - Walk-forward positive rate: 100%.
+  - Worst listed crisis-window drawdown: -7.79%.
+  - Inverse weight: 0%.
+- Important interpretation: conditional inverse and tactical ETF components were tested, but the only promoted API-estimated row used the 200-day timing overlay plus defensive proxy and assigned 0% to inverse and tactical ETF components.
+- Wrote `p123-output/dynamic_candidate_promotion_report_20260522.md`.
+- Wrote `p123-output/native_validation_package_20260522.md`.
+- Native validation package is a handoff only. It does not claim the target is met; native Portfolio123 Strategy Book validation is still required before any final performance claim.
+
+## Dynamic Timing Warmup Correction
+
+Updated: 2026-05-22 13:56 Eastern Daylight Time
+- Code review found that early timing warmup rows were being treated as `False` signals rather than excluded, because rolling-window comparisons against missing values collapsed to false.
+- Fixed `build-timing-signals` so each timing rule stays missing until its required inputs exist.
+- Rebuilt timing signals, dynamic panel, dynamic trial ledger, promotion report, and native validation package.
+- Corrected timing signal window: 2007-06-26 through 2026-01-05, 4,662 rows.
+- Corrected dynamic panel window: 2007-06-26 through 2026-01-05, 4,662 rows.
+- Dynamic optimizer trial count remains 648.
+- Passing API-estimated nominations after the warmup correction: 1.
+- Corrected promoted API-estimated row:
+  - Trial: 386.
+  - Optimizer family: `dynamic_grid_timed_200d_s0.80_inv0.00_taa0.00_def0.20`.
+  - Weights: 16% each to the five 200-day timed strategy variants, 20% to the defensive proxy component.
+  - API-estimated CAGR: 20.68%.
+  - API-estimated Sharpe: 2.00.
+  - API-estimated max drawdown: -12.81%.
+  - Walk-forward positive rate: 100%.
+  - Worst listed crisis-window drawdown: -7.79%.
+  - Inverse weight: 0%.
+- Important caveat: this corrected dynamic candidate starts after timing warmup in mid-2007, so native P123 validation must confirm whether the platform's native simulation and warmup behavior support the user's desired full-history interpretation.
+
+## U1 Dynamic Goal And Trial Accounting
+
+Updated: 2026-05-22 13:41 Eastern Daylight Time
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_goal_strategy_book_20260522.json`.
+- Captured all seven dynamic ideation survivors.
+- Trial accounting now explicitly includes discovery sources, timing rules, timing ensembles, ETF component variants, and allocation rows.
+- Dynamic results remain API-estimated nominations until native Portfolio123 Strategy Book validation.
+
+## U3 P123-Native Timing Signal Panel
+
+Updated: 2026-05-22 13:41 Eastern Daylight Time
+- Built timing signals from `p123-output/return_panel_20260522.csv` using `SPY` as benchmark proxy.
+- Signal window: 2006-06-22 to 2026-01-05 across 4915 rows.
+- Technical timing rules are shifted one bar to avoid same-day look-ahead.
+- Macro stress candidates are documented but not activated pending P123 macro-series confirmation.
+
+## U2 Expanded Strategy Discovery
+
+Updated: 2026-05-22 13:41 Eastern Daylight Time
+- Merged 1 discovery sources into `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/expanded_strategy_discovery_20260522.csv` and `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/expanded_strategy_discovery_20260522.json`.
+- Unique strategies discovered: 23.
+- Included strategies after displayed Sharpe > 1 and inception before 2007 filter: 5.
+- Discovery-source count is recorded as part of dynamic trial accounting.
+
+## U4-U5 Dynamic Panel And Tactical ETF Component
+
+Updated: 2026-05-22 13:42 Eastern Daylight Time
+- Built dynamic panel from `p123-output/return_panel_20260522.csv` and `p123-output/timing_signal_panel_20260522.csv`.
+- Dynamic window: 2006-06-22 to 2026-01-05 across 4915 rows.
+- Added timed variants for 5 strategy streams, one conditional inverse sleeve, and one tactical ETF component.
+- Conditional inverse exposure is active only when the timing ensemble marks inverse-enabled risk-off days.
+
+## U4-U5 Dynamic Panel And Tactical ETF Component
+
+Updated: 2026-05-22 13:48 Eastern Daylight Time
+- Built dynamic panel from `p123-output/return_panel_20260522.csv` and `p123-output/timing_signal_panel_20260522.csv`.
+- Dynamic window: 2006-06-22 to 2026-01-05 across 4915 rows.
+- Added timed variants for 5 strategy streams, one conditional inverse sleeve, and one tactical ETF component.
+- Conditional inverse exposure is active only when the timing ensemble marks inverse-enabled risk-off days.
+
+## U6 Dynamic Optimizer And Promotion Gates
+
+Updated: 2026-05-22 13:48 Eastern Daylight Time
+- Optimized `p123-output/dynamic_return_panel_20260522.csv` using a narrow pre-registered dynamic grid.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.csv` and `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.json`.
+- Trials: 123; passing allocations: 0.
+- Gates: CAGR > 20.00%, Sharpe > 2.00, max drawdown > -25.00%.
+
+## U6 Dynamic Candidate Promotion Funnel
+
+Updated: 2026-05-22 13:48 Eastern Daylight Time
+- Read dynamic trial ledger `p123-output/dynamic_trial_ledger_20260522.csv`.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_no_winner_report_20260522.md`.
+- Promoted API-estimated candidates: 0.
+
+## U7 Native Validation Package
+
+Updated: 2026-05-22 13:48 Eastern Daylight Time
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/native_validation_package_20260522.md`.
+- Package is a handoff for native P123 validation and makes no final performance claim.
+
+## U9 Strict Optimizer And Validation
+
+Updated: 2026-05-22 13:48 Eastern Daylight Time
+- Optimized `p123-output/dynamic_return_panel_20260522.csv` using the pre-registered ladder.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.csv` and `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.json`.
+- Trials: 22565; passing allocations: 0.
+- Gates: CAGR > 20.00%, Sharpe > 2.00, max drawdown > -0.25.
+
+## U6 Dynamic Optimizer And Promotion Gates
+
+Updated: 2026-05-22 13:49 Eastern Daylight Time
+- Optimized `p123-output/dynamic_return_panel_20260522.csv` using a narrow pre-registered dynamic grid.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.csv` and `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.json`.
+- Trials: 648; passing allocations: 1.
+- Gates: CAGR > 20.00%, Sharpe > 2.00, max drawdown > -25.00%.
+
+## U6 Dynamic Candidate Promotion Funnel
+
+Updated: 2026-05-22 13:49 Eastern Daylight Time
+- Read dynamic trial ledger `p123-output/dynamic_trial_ledger_20260522.csv`.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_candidate_promotion_report_20260522.md`.
+- Promoted API-estimated candidates: 1.
+
+## U7 Native Validation Package
+
+Updated: 2026-05-22 13:49 Eastern Daylight Time
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/native_validation_package_20260522.md`.
+- Package is a handoff for native P123 validation and makes no final performance claim.
+
+## U7 Native Validation Package
+
+Updated: 2026-05-22 13:49 Eastern Daylight Time
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/native_validation_package_20260522.md`.
+- Package is a handoff for native P123 validation and makes no final performance claim.
+
+## U3 P123-Native Timing Signal Panel
+
+Updated: 2026-05-22 13:50 Eastern Daylight Time
+- Built timing signals from `p123-output/return_panel_20260522.csv` using `SPY` as benchmark proxy.
+- Signal window: 2007-06-26 to 2026-01-05 across 4662 rows.
+- Technical timing rules are shifted one bar to avoid same-day look-ahead.
+- Macro stress candidates are documented but not activated pending P123 macro-series confirmation.
+
+## U4-U5 Dynamic Panel And Tactical ETF Component
+
+Updated: 2026-05-22 13:51 Eastern Daylight Time
+- Built dynamic panel from `p123-output/return_panel_20260522.csv` and `p123-output/timing_signal_panel_20260522.csv`.
+- Dynamic window: 2007-06-26 to 2026-01-05 across 4662 rows.
+- Added timed variants for 5 strategy streams, one conditional inverse sleeve, and one tactical ETF component.
+- Conditional inverse exposure is active only when the timing ensemble marks inverse-enabled risk-off days.
+
+## U6 Dynamic Optimizer And Promotion Gates
+
+Updated: 2026-05-22 13:51 Eastern Daylight Time
+- Optimized `p123-output/dynamic_return_panel_20260522.csv` using a narrow pre-registered dynamic grid.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.csv` and `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_trial_ledger_20260522.json`.
+- Trials: 648; passing allocations: 1.
+- Gates: CAGR > 20.00%, Sharpe > 2.00, max drawdown > -25.00%.
+
+## U6 Dynamic Candidate Promotion Funnel
+
+Updated: 2026-05-22 13:51 Eastern Daylight Time
+- Read dynamic trial ledger `p123-output/dynamic_trial_ledger_20260522.csv`.
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/dynamic_candidate_promotion_report_20260522.md`.
+- Promoted API-estimated candidates: 1.
+
+## U7 Native Validation Package
+
+Updated: 2026-05-22 13:51 Eastern Daylight Time
+- Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/native_validation_package_20260522.md`.
+- Package is a handoff for native P123 validation and makes no final performance claim.
