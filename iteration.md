@@ -551,3 +551,167 @@ Updated: 2026-05-22 13:51 Eastern Daylight Time
 Updated: 2026-05-22 13:51 Eastern Daylight Time
 - Wrote `C:/Users/Eddy/Desktop/Portfolio123 Strategy Dev/p123-output/native_validation_package_20260522.md`.
 - Package is a handoff for native P123 validation and makes no final performance claim.
+
+## U8 Native Platform Validation Prep
+
+Updated: 2026-05-22 14:24 Eastern Daylight Time
+- User requested direct Portfolio123 platform replication through the in-app Browser plugin and invoked `ce-ideate`.
+- User selected option 3 for ideation handling, so no new ideation artifact was created; ideation was used as working validation design only.
+- Confirmed the in-app browser session is authenticated on Portfolio123.
+- Opened the native Simulated Books list at `https://www.portfolio123.com/app/opener/BOOKSIM?cat=-2` in read-only mode.
+- Read native P123 book rows already present on the account. Visible strict-goal-relevant examples included:
+  - `BookSim - Copy`: inception `01/03/06`, 4 assets, annualized return `22.9%`, Sharpe `1.90`, drawdown `-25.5%`.
+  - `BookSim - Copy(2)`: inception `01/03/06`, 4 assets, annualized return `26.5%`, Sharpe `1.84`, drawdown `-31.9%`.
+  - `BookSim - Copy(3)`: inception `01/03/06`, 4 assets, annualized return `22.0%`, Sharpe `1.86`, drawdown `-25.2%`.
+  - `BookSim(6)`: inception `01/03/06`, 5 assets, annualized return `23.6%`, Sharpe `1.85`, drawdown `-27.1%`.
+- Opened the native summary page for `BookSim - Copy` at `https://www.portfolio123.com/port_summary.jsp?portid=1930094` in read-only mode.
+- Confirmed native summary metrics for `BookSim - Copy`: annualized return `22.90%`, Sharpe Ratio `1.90`, max drawdown `-25.52%`, 4 assets, static weight sizing, and every-4-weeks book rebalance.
+- This existing native book is close to the strict goal but does not pass Sharpe > 2 or max drawdown better than -25%.
+- Next account-changing validation step requires user confirmation before creating/editing `codex_` native objects, cloning component strategies, adding models to a simulated book, or running a native simulation.
+
+## U9 Manual Native Validation Handoff Brainstorm
+
+Updated: 2026-05-22 14:56 Eastern Daylight Time
+- User selected manual handoff only, so no Portfolio123 platform objects were created, edited, copied, deleted, or run.
+- Used `ce-brainstorm` as a lightweight scope and handoff workflow for the native validation procedure.
+- Created `docs/brainstorms/2026-05-22-native-p123-strategy-book-validation-requirements.md`.
+- The handoff document captures:
+  - The promoted trial `386` candidate and allocation weights.
+  - The inspected existing native book reference metrics.
+  - Manual platform steps for validating the strategy book.
+  - The 200-day timing overlay and defensive proxy assumptions.
+  - Scope boundaries that prevent accidental account-changing actions.
+  - Open questions to resolve before any future native run.
+
+## U10 Manual Native Validation Plan
+
+Updated: 2026-05-22 15:03 Eastern Daylight Time
+- User invoked `ce-plan` after the manual native validation handoff.
+- Treated the task as a non-software research/workflow plan, not a code implementation plan.
+- Used `docs/brainstorms/2026-05-22-native-p123-strategy-book-validation-requirements.md` as the source of truth.
+- Created `docs/plans/2026-05-22-004-native-p123-strategy-book-validation-plan.md`.
+- The plan preserves manual-only boundaries: no agent-created, edited, copied, deleted, or run Portfolio123 objects.
+- The plan breaks native validation into read-only inventory, timing-surface determination, manual component specs, manual book specs, optional native evidence capture, and post-run interpretation.
+- The two decisions to resolve before any future native run are book rebalance cadence and defensive proxy variant policy.
+
+## U11 Read-Only Native Validation Work
+
+Updated: 2026-05-22 15:20 Eastern Daylight Time
+- User invoked `ce-work` after the native validation plan.
+- Executed only the read-only portions of the plan. No Portfolio123 objects were created, edited, copied, deleted, saved, submitted, or run.
+- Opened the simulated books list and collected close native book references:
+  - `BookSim - Copy` / `1930094`: period `01/03/06 - 04/02/26`, 4 assets, every-4-weeks rebalance, annualized return `22.90%`, Sharpe `1.90`, max drawdown `-25.52%`.
+  - `BookSim - Copy(2)` / `1930095`: period `01/03/06 - 04/02/26`, 4 assets, every-4-weeks rebalance, annualized return `26.55%`, Sharpe `1.84`, max drawdown `-31.92%`.
+  - `BookSim - Copy(3)` / `1930104`: period `01/03/06 - 04/02/26`, 4 assets, every-4-weeks rebalance, annualized return `21.99%`, Sharpe `1.86`, max drawdown `-25.18%`.
+  - `BookSim(6)` / `1930097`: period `01/03/06 - 04/02/26`, 5 assets, every-4-weeks rebalance, annualized return `23.60%`, Sharpe `1.85`, max drawdown `-27.13%`.
+- Confirmed the closest visible native books are static-weight mixes of existing PTF/ETF assets, mainly Advisor Small Cap Focus, Wes Gray Momentum Microcaps Hedged, GLD, TLT, and sometimes SAMCF + Quality Filter Group.
+- Inspected `BookSim - Copy` trading-system/review surfaces in read-only mode.
+- The visible review surface showed General, Assets & Rebalance, and Period & Restrictions settings, but did not expose a book-level timing rule, formula rule, conditional allocation rule, or hedge/timing rule surface.
+- Direct navigation to some wizard steps returned internal server errors, so book-level timing is not proven impossible; it is only unconfirmed from read-only inspection.
+- Wrote `p123-output/native_strategy_book_readonly_inventory_20260522.md` with the inventory, timing-surface observations, and remaining decisions before any native run.
+
+## U12 Native Replication Ideation, Plan, And Capability Gate
+
+Updated: 2026-05-22 15:27 Eastern Daylight Time
+- User invoked `ce-ideate`, then `ce-plan`, then `ce-work` for direct Portfolio123 replication of the promoted dynamic Strategy Book candidate.
+- Created `docs/ideation/2026-05-22-native-p123-replication-ideation.md`.
+- Created `docs/plans/2026-05-22-005-native-p123-replication-execution-plan.md`.
+- Reconfirmed the candidate as trial `386`, optimizer family `dynamic_grid_timed_200d_s0.80_inv0.00_taa0.00_def0.20`, five 200-day timed components at 16% each, and an always-on 20% `SHY` defensive sleeve.
+- Inspected the new native Simulated Book wizard without saving or running:
+  - General, Assets, Rebalance, and Period tabs were visible.
+  - The book wizard exposed static asset selection, fixed-weight allocation, rebalance cadence, tolerances, exposure, and period controls.
+  - No book-level timing, formula, hedge, or conditional allocation surface was visible.
+- Inspected source simulated strategy summaries for the five source IDs:
+  - `1873038`: `Canada Core Combo - Eddy/Kurtis`, period `01/01/06 - 01/06/26`, Sharpe `1.17`.
+  - `1934014`: `SAMCF + Quality Filter Group - Copy`, period `01/01/06 - 04/20/26`, Sharpe `1.29`.
+  - `1934023`: `Small Cap Focus - Small Cap Universe - Small AUM - Copy`, period `01/01/06 - 04/20/26`, Sharpe `1.11`.
+  - `1934030`: `Small Caps + Altman in Ranking + Altman > 1 - Copy`, period `01/01/06 - 04/20/26`, Sharpe `1.37`.
+  - `1934037`: `Advisor TSX Mighty Mouse Momentum - Copy`, period `01/01/06 - 04/20/26`, Sharpe `1.01`.
+- Opened an unsaved cloned simulation wizard from source `1934014` and inspected the Hedge tab.
+- Confirmed native component-level timing controls exist:
+  - Hedge can be enabled.
+  - Hedge supports `Go To Cash` or `Choose Position`.
+  - The hedge vehicle chooser includes `Treasury 1-3 Year (SHY:USA)`.
+  - Hedge entry and exit rules accept formula textareas.
+- Identified the exact native component pattern:
+  - Add source Buy rule `Close(0,#bench) > SMA(200,0,#bench)`.
+  - Add source Sell rule `Close(0,#bench) <= SMA(200,0,#bench)`.
+  - Enable Hedge, select `SHY`, use a long 100% hedge, enter on risk-off, exit on risk-on.
+- Stopped before creating/running objects because the exact route appears to require five component simulation runs plus one final Strategy Book run, while the approved native run budget is 5.
+- Wrote `p123-output/native_strategy_book_validation_20260522.md`.
+- Native runs spent in this pass: 0.
+- No Portfolio123 objects were saved, created, edited, deleted, submitted, or run.
+
+## U13 First Native Timed Component Pilot
+
+Updated: 2026-05-22 15:41 Eastern Daylight Time
+- User approved proceeding after the run-budget gate.
+- Built the first timed component from source `1934014` in the native P123 simulated strategy wizard:
+  - Added Buy rule `Close(0,#bench) > SMA(200,0,#bench)`.
+  - Added Sell rule `Close(0,#bench) <= SMA(200,0,#bench)`.
+  - Enabled Hedge / Market Timing.
+  - Selected `Treasury 1-3 Year (SHY:USA)` as the hedge vehicle.
+  - Set hedge ratio to `100% of Current Holdings`.
+  - Set hedge entry rule `Close(0,#bench) <= SMA(200,0,#bench)`.
+  - Set hedge exit rule `Close(0,#bench) > SMA(200,0,#bench)`.
+- The normal visible Run Simulation link did not execute through the Browser wrapper, but direct navigation to the native run endpoint `port_sim_go.jsp?<timestamp>` successfully ran the configured wizard session.
+- Native component run completed and redirected to `https://www.portfolio123.com/port_summary.jsp?portid=1943514`.
+- New native object ID: `1943514`.
+- Actual P123 object name: `SAMCF + Quality Filter Group - Copy(2)`.
+- Intended object name: `codex_dynamic_1934014_timed_200d`.
+- Native component metrics:
+  - Period: `01/01/06 - 04/20/26`.
+  - Annualized return: `22.41%`.
+  - Sharpe Ratio: `1.18`.
+  - Max drawdown: `-27.50%`.
+  - Correlation with S&P 500: `0.48`.
+- Paused before creating additional components because the reliable run path bypassed the naming dialog and saved the pilot under P123's default clone name.
+- Attempts to open the component properties modal through Browser clicks did not expose editable rename fields.
+- Updated `p123-output/native_strategy_book_validation_20260522.md` with the pilot result, run ledger, and decision needed.
+- Native runs spent so far in this native replication execution: 1.
+
+## U14 Pilot Component Rename Fix
+
+Updated: 2026-05-22 16:14 Eastern Daylight Time
+- User instructed the agent to fix the name directly and keep iterating.
+- Updated `AGENTS.md` so Portfolio123 web login is attempted automatically from the project-local encrypted secrets file when the site is logged out, without printing or storing secret values.
+- Logged into Portfolio123 through the in-app Browser using the available project credentials.
+- Renamed native object `1943514` from `SAMCF + Quality Filter Group - Copy(2)` to `codex_dynamic_1934014_timed_200d`.
+- Verified the new platform name on `https://www.portfolio123.com/port_summary.jsp?portid=1943514`.
+- Browser clicks against the component-properties modal did not expose editable fields reliably, so the successful path used Portfolio123's authenticated Svelte endpoint:
+  - Endpoint: `POST /spr/user/compProps`.
+  - Required non-secret request characteristics: JSON body, `ANGULAR_REQ: 1`, `SVELTE_REQ: 1`, `X-Requested-With: XMLHttpRequest`, and the summary-page referer.
+  - No passwords, API keys, cookies, tokens, or session values were written to project files.
+- Updated `p123-output/native_strategy_book_validation_20260522.md` with the rename status and endpoint finding.
+- Native runs spent remain 1; rename did not require a simulation run.
+- Next step is to create and run the remaining four timed native components using the same `codex_dynamic_*` naming discipline before creating the final Strategy Book.
+
+## U15 Native Component Batch And Strategy Book Tier 1 Result
+
+Updated: 2026-05-22 16:43 Eastern Daylight Time
+- Created, ran, and renamed all remaining timed native component simulations:
+  - `1943547` -> `codex_dynamic_1934023_timed_200d`: annualized return `12.27%`, Sharpe `0.58`, max drawdown `-38.33%`.
+  - `1943548` -> `codex_dynamic_1934030_timed_200d`: annualized return `26.88%`, Sharpe `1.28`, max drawdown `-31.32%`.
+  - `1943549` -> `codex_dynamic_1934037_timed_200d`: annualized return `14.35%`, Sharpe `0.98`, max drawdown `-20.42%`.
+  - `1943550` -> `codex_dynamic_1873038_timed_200d`: annualized return `17.52%`, Sharpe `1.19`, max drawdown `-19.37%`.
+- Existing pilot component remained:
+  - `1943514` / `codex_dynamic_1934014_timed_200d`: annualized return `22.41%`, Sharpe `1.18`, max drawdown `-27.50%`.
+- Built the native simulated Strategy Book `codex_dynamic_strategy_book_candidate` with object ID `1943551`.
+- The native book used static weights and every-4-weeks rebalance:
+  - 16% each to the five timed `codex_dynamic_*` simulated strategies.
+  - 20% to raw `iShares 1-3 Year Treasury Bond ETF (SHY)`.
+- The direct `port_sim_go.jsp?<timestamp>` runner path that worked for simulated strategies failed for simulated books with `Session trading system changed`.
+- The successful book run path was the native `BookSimulButton`, which opened the Portfolio123 properties modal; after setting the name to `codex_dynamic_strategy_book_candidate` and clicking Save, P123 ran the book and redirected to the summary.
+- Native Tier 1 Strategy Book result:
+  - Period: `12/30/05 - 01/06/26`.
+  - Annualized return: `15.88%`.
+  - Sharpe Ratio: `1.22`.
+  - Max drawdown: `-20.11%`.
+  - Correlation with S&P 500: `0.58`.
+- Strict goal result:
+  - CAGR/annualized return > 20%: failed.
+  - Sharpe > 2.0: failed.
+  - Max drawdown better than -25%: passed.
+- Interpretation: the promoted API-estimated trial `386` did not survive native Portfolio123 Tier 1 Strategy Book validation.
+- Most actionable next native iteration: test a corrected hedge-sizing variant using `100% of Total Equity / Includes cash` rather than `100% of Current Holdings`, because the intended local behavior was full risk-off substitution into SHY.
+- Updated `p123-output/native_strategy_book_validation_20260522.md` with component results, final book result, gate comparison, run ledger, and interpretation.

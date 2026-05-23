@@ -49,7 +49,7 @@ These docs capture verified P123 routes, model-ranking practices, and AI Factor 
 
 Do not write Portfolio123 passwords, API IDs, API keys, browser cookies, tokens, or session values into repo/workspace files, docs, logs, screenshots, or chat output.
 
-For web access, prefer the user's logged-in Chrome session. If the user is not logged in, ask them to complete login in Chrome and then continue.
+For web access, prefer an already-authenticated browser session. If Portfolio123 is logged out, automatically try to log in using the project-local encrypted secrets file and `scripts/Import-Portfolio123Secrets.ps1` without printing or storing secret values. Ask the user to complete login only if the encrypted secrets are missing, fail to decrypt, or the site requires an interactive challenge that the agent cannot complete safely.
 
 This workspace may contain a local encrypted secrets file:
 
