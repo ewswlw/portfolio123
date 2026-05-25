@@ -1,7 +1,7 @@
 ---
 title: Portfolio123 AI Factor Validation Strategy Workflow
 date: 2026-05-16
-last_updated: 2026-05-16
+last_updated: 2026-05-25
 category: workflow-issues
 module: Portfolio123 AI Factor strategy development
 problem_type: workflow_issue
@@ -120,6 +120,8 @@ https://www.portfolio123.com/sv/aiFactor/{id}/validation/models
 
 4. Create a `codex_` ranking system copy before editing formulas. In the verified workflow, an existing ranking was copied with Save As, then the copy was edited in the raw editor. This avoided touching the user's original ranking.
 
+If the native ranking-system `Save As` route is blocked, use the API-owned `ApiRankingSystem` as a temporary bridge instead of abandoning native validation. Update it with `rank_update` using the exact `AIFactorValidation(...)` XML, then select `ApiRankingSystem` in the native strategy wizard. This object is mutable shared API state, so immediately log the exact XML/formula, API response, and native strategy ID under `p123-output/`. See the API-ranking workflow learning for the full fallback.
+
 5. Create simulated strategies from the ranking system using:
 
 ```text
@@ -164,6 +166,8 @@ Verified objects and results from the search:
 | `codex_strategy_ai_base87_et2_v4_smooth30` | 1941644 | 21.62% CAGR, 0.77 Sharpe |
 | `codex_ranking_ai_base87_live_v1` | 545009 | Live predictor ranking copy using `AIFactor(...)` |
 | `codex_strategy_ai_base87_live_v1_5y_conc10` | 1941664 | Live predictor branch; 5Y request rejected, accepted only from `01/19/2026 - 05/16/2026` |
+| `ApiRankingSystem` | 541785 | API-owned fallback ranking system; mutable, so log exact XML/formula after every `rank_update` |
+| `codex_strategy_ai_base87_2024_oos_baseline_v1` | 1944189 | Clone validation branch from `01/01/2024 - 06/21/2025`; native Tier 2 run made 14.03% annualized with 0.23 Sharpe and lagged SPY |
 
 The correct conclusion was not "we found a winning strategy." It was:
 
@@ -203,6 +207,7 @@ Avoid calling this a five-year result. The requested five-year native run was re
 
 - Portfolio123 skill: `C:/Users/Eddy/.codex/skills/portfolio123/SKILL.md`
 - Portfolio123 AI Factor guide: `C:/Users/Eddy/.codex/skills/portfolio123/ai-factor-guide.md`
+- Portfolio123 API-ranking native strategy fallback: `docs/solutions/workflow-issues/portfolio123-api-ranking-native-ai-factor-strategy-workflow-2026-05-25.md`
 - Portfolio123 browser navigation learning: `docs/solutions/workflow-issues/portfolio123-browser-navigation-ai-factors-2026-05-16.md`
 - Local final report: `p123-output/final_ai_factor_strategy_report_20260516.md`
 - Local DNA log: `p123-output/strategy_dna_log_20260516.csv`
