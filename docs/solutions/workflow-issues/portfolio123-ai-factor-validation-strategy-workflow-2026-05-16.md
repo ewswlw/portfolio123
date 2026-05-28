@@ -42,7 +42,7 @@ Session-history search found no usable additional prior Codex sessions for this 
 
 ## Guidance
 
-Start by loading the Portfolio123 skill and checking `docs/solutions/` for relevant P123 learnings. Use the logged-in Chrome session for account-state work, and use P123 native pages for formula and performance claims.
+Start by loading the Portfolio123 skill and checking `docs/solutions/` for relevant P123 learnings. Use the logged-in browser surface requested by the user for account-state work, and use P123 native pages for formula and performance claims.
 
 For exact validation models, copy the formula from P123's native Validation Prediction Formula dialog. Do not infer the formula from the display row alone. In the verified case, the table row was:
 
@@ -126,7 +126,15 @@ https://www.portfolio123.com/sv/aiFactor/{id}/validation/models
 
 4. Create a `codex_` ranking system copy before editing formulas. In the verified workflow, an existing ranking was copied with Save As, then the copy was edited in the raw editor. This avoided touching the user's original ranking.
 
-If the native ranking-system `Save As` route is blocked, use the API-owned `ApiRankingSystem` as a temporary bridge instead of abandoning native validation. Update it with `rank_update` using the exact `AIFactorValidation(...)` XML, then select `ApiRankingSystem` in the native strategy wizard. This object is mutable shared API state, so immediately log the exact XML/formula, API response, and native strategy ID under `p123-output/`. See the API-ranking workflow learning for the full fallback.
+Before concluding that ranking-system work is blocked, check the exact opener:
+
+```text
+https://www.portfolio123.com/app/opener/RNK
+```
+
+If the native ranking-system `Save As` route is blocked and the user permits API use, use the API-owned `ApiRankingSystem` as a temporary bridge instead of abandoning native validation. Update it with `rank_update` using the exact `AIFactorValidation(...)` XML, then select `ApiRankingSystem` in the native strategy wizard. This object is mutable shared API state, so immediately log the exact XML/formula, API response, and native strategy ID under `p123-output/`. See the API-ranking workflow learning for the full fallback.
+
+If the user requests browser-only or no API, do not use the API bridge. Continue with native web-platform routes and report any ranking-system limitation explicitly.
 
 5. Create simulated strategies from the ranking system using:
 

@@ -33,6 +33,7 @@ This folder holds generated notes from Portfolio123 factor research surfaces, in
 ## Markdown Reports
 
 - [FactorMiner: Andreas and portfolio123](factorminer_andreas_portfolio123_20260528.md) - FactorMiner research notes for the named Portfolio123 factor dataset.
+- [FactorMiner Andreas Browser-Only Native Strategy Test](factorminer_andreas_native_strategy_browser_only_20260528.md) - Browser-only native P123 simulated-strategy test using the FactorMiner broad-run factors.
 
 ---
 
@@ -47,6 +48,7 @@ This folder holds generated notes from Portfolio123 factor research surfaces, in
 | File | Type | Brief description |
 |---|---|---|
 | [factorminer_andreas_portfolio123_20260528.md](factorminer_andreas_portfolio123_20260528.md) | Markdown report | FactorMiner research notes for the named Portfolio123 factor dataset. |
+| [factorminer_andreas_native_strategy_browser_only_20260528.md](factorminer_andreas_native_strategy_browser_only_20260528.md) | Markdown report | Browser-only native P123 simulated-strategy test using the FactorMiner broad-run factors. |
 
 ---
 

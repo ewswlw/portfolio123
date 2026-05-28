@@ -10,12 +10,14 @@ severity: medium
 applies_when:
   - "Creating a native Portfolio123 simulated strategy from an AI Factor validation model"
   - "P123 native ranking-system Save As is unavailable or blocked by membership level"
+  - "The exact native ranking-system opener has been checked and a browser-only route is insufficient"
   - "A strategy must use saved AIFactorValidation predictions from a cloned AI Factor"
   - "A native Tier 2 simulation is needed after an API ranking-system update"
 tags:
   - portfolio123
   - ai-factor
   - api-ranking
+  - ranking-system
   - native-simulation
   - aifactorvalidation
   - strategy-wizard
@@ -50,11 +52,19 @@ The native ranking copy route failed because `/app/ranking-system/545001/save-as
 This page is not available at your current membership level.
 ```
 
-The workable route was to update Portfolio123's API-owned ranking system, `ApiRankingSystem` (`541785`), via `rank_update`, then select that ranking system in the native simulated-strategy wizard and run the simulation there.
+The workable route for that specific run was to update Portfolio123's API-owned ranking system, `ApiRankingSystem` (`541785`), via `rank_update`, then select that ranking system in the native simulated-strategy wizard and run the simulation there.
 
 ## Guidance
 
-Use `ApiRankingSystem` only as a deliberate bridge when a separate named ranking copy is unavailable. It is mutable account state: a later `rank_update` call will overwrite what future strategies using `ApiRankingSystem` see. For durable audit trails, save the exact XML, API response, native strategy ID, and summary metrics under `p123-output/`.
+Use `ApiRankingSystem` only as a deliberate bridge when a separate named ranking copy is unavailable and the user has not constrained the work to browser-only. Before invoking this fallback, check the exact native opener:
+
+```text
+https://www.portfolio123.com/app/opener/RNK
+```
+
+Do not infer a membership block from guessed ranking URLs. The exact ranking-system opener can be available even when a specific `Save As` or edit route is blocked. If the user says browser-only or no API, keep the workflow on native web pages and report any limitation instead of using `rank_update`.
+
+`ApiRankingSystem` is mutable account state: a later `rank_update` call will overwrite what future strategies using `ApiRankingSystem` see. For durable audit trails, save the exact XML, API response, native strategy ID, and summary metrics under `p123-output/`.
 
 The working ranking XML pattern was:
 
@@ -121,6 +131,7 @@ The tradeoff is mutability. `ApiRankingSystem` is a shared API object, so the st
 
 - When P123's native ranking-system copy or raw-editor `Save As` route is blocked.
 - When the user has confirmed that a P123 API credit may be spent.
+- When the user has not requested browser-only work.
 - When exact saved validation predictions are available for `AIFactorValidation(...)`.
 - When the next claim needs native P123 simulated-strategy results rather than Tier 3 screen estimates.
 - When a temporary API ranking bridge is acceptable and the exact formula will be logged.
@@ -175,4 +186,4 @@ p123-output/native_strategy_ai_base87_2024_oos_baseline_YYYYMMDD.md
 
 ## Tags
 
-#portfolio123 #ai-factor #api-ranking #native-simulation #aifactorvalidation #strategy-wizard #apirankingsystem #tier-2-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues
+#portfolio123 #ai-factor #api-ranking #ranking-system #native-simulation #aifactorvalidation #strategy-wizard #apirankingsystem #tier-2-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues

@@ -37,6 +37,8 @@ This learning was captured after completing a cost-controlled Portfolio123 AI Fa
 
 The campaign was constrained to the Portfolio123 web platform. AI Factor setup, dataset loads, validation starts, saved validation predictions, ranking/strategy construction, and native simulations were handled through the UI. Native Portfolio123 output was the source of truth; AI Factor compare and return tables were used only as triage evidence before native promotion.
 
+For platform-only work, keep the entire workflow on native web pages. Do not fall back to the Portfolio123 API or `ApiRankingSystem` unless the user explicitly lifts the browser-only constraint. If ranking-system access is uncertain, first check the exact native opener at `https://www.portfolio123.com/app/opener/RNK` and document what the web platform allows.
+
 The final result was a strict no-winner. The best native pure AI Factor strategy found was:
 
 ```text

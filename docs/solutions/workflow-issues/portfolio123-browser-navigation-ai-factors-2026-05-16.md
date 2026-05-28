@@ -7,14 +7,17 @@ problem_type: workflow_issue
 component: assistant
 severity: medium
 applies_when:
-  - "Using a logged-in Chrome session to inspect Portfolio123 account objects"
-  - "Listing simulated strategies, AI Factors, validation models, results, or predictors"
+  - "Using a logged-in browser session to inspect Portfolio123 account objects"
+  - "Listing simulated strategies, AI Factors, Factor Lists, validation models, results, or predictors"
   - "Ranking AI Factor models from native Portfolio123 validation output"
 tags:
   - portfolio123
   - p123
   - chrome
+  - browser
   - ai-factor
+  - factor-list
+  - ranking-system
   - simulated-strategies
   - browser-automation
   - native-validation
@@ -36,16 +39,22 @@ This learning was verified while answering:
 
 - Top simulated strategies by native P123 `Annual`, `Excess`, `Sharpe Ratio`, and `DDown` columns.
 - Top AI Factor models by native P123 model-table `Rank`, with tie-breaks based on populated `Results` and `Predictors` counts.
+- Browser-only Factor List and FactorMiner strategy work using the in-app Browser plugin.
 
 ## Guidance
 
-Use the Portfolio123 skill first, then use the Chrome plugin when account login state matters. Do not inspect cookies, local storage, or browser profile internals. Work from visible P123 pages and table text.
+Use the Portfolio123 skill first, then use the user-requested browser surface when account login state matters. Use the bundled Chrome plugin when the user asks for `@chrome` or an already-open Chrome profile; use the in-app Browser plugin when the user asks for `@Browser` or browser-only platform work. Do not inspect cookies, local storage, or browser profile internals. Work from visible P123 pages and table text.
 
 Useful routes:
 
 | Task | Working Route | Notes |
 |---|---|---|
 | Simulated strategies list | `https://www.portfolio123.com/app/opener/SIM` | Exposes all simulated strategies and native columns: `Annual`, `Excess`, `Sharpe Ratio`, `DDown`. |
+| Ranking systems list | `https://www.portfolio123.com/app/opener/RNK` | Verified account-level opener for native ranking systems. Check this exact route before concluding ranking creation or editing is blocked. |
+| Factor Lists list | `https://www.portfolio123.com/sv/opener/FACTORLIST/-2` | New Svelte route. Shows account Factor Lists, including FactorMiner-ready lists. |
+| Factor List factors | `https://www.portfolio123.com/sv/factorList/{id}/factors` | Shows the factor formulas in a saved Factor List. |
+| Factor List generator | `https://www.portfolio123.com/sv/factorList/{id}/generate` | Shows dataset status and any resource/API-credit cost before generation. Do not click Generate without confirmation when credits are shown. |
+| FactorMiner analysis | `https://www.portfolio123.com/spr/factorList/factorMiner/{id}` | Opens FactorMiner analysis controls/results for a Factor List. |
 | AI Factor list | `https://www.portfolio123.com/sv/opener/AIFACTOR/-2` | New Svelte route. Shows AI Factor rows with counts for `Dataset`, `Validations`, `Results`, `Predictors`, `Resource Units`, created, updated. |
 | AI Factor validation models | `https://www.portfolio123.com/sv/aiFactor/{id}/validation/models` | Shows model rows with `Model`, `Rank`, `Validation`, `Resource Units`, and `Update Date`. |
 | AI Factor results | `https://www.portfolio123.com/sv/aiFactor/{id}/results` | Use when deeper lift/quantile diagnostics are needed. |
@@ -76,6 +85,14 @@ For AI Factor models:
 
 Do not treat training duration, worker type, memory usage, or resource units as performance metrics. They are operational metadata.
 
+For Factor Lists and FactorMiner:
+
+1. Open `/sv/opener/FACTORLIST/-2`.
+2. Open the relevant Factor List and confirm the list ID, factor count, universe, benchmark, and dataset status.
+3. If the Generate tab shows a credit or Resource Unit cost, stop for confirmation before starting generation.
+4. Use FactorMiner as diagnostic evidence only. Promote candidates into native P123 simulated strategies or ranking systems before reporting final strategy performance.
+5. When translating FactorMiner formulas into `FRank()` expressions, quote the formula string, for example `FRank("NetFCFPSTTM/Price")`. P123 rejects unquoted `FRank()` formulas in native buy rules.
+
 ## Why This Matters
 
 P123's API does not provide broad account-level listing endpoints for strategies or AI Factors. Browser inspection is therefore the practical discovery path, but navigation must stay anchored to known native pages. Reading the rendered P123 tables preserves the platform's own validation hierarchy and avoids misleading local substitutes.
@@ -86,7 +103,8 @@ The AI Factor list also contains copies, unloaded datasets, and factors with val
 
 - When a user asks for their top P123 simulated strategies.
 - When a user asks for their best AI Factor models.
-- When the task needs authenticated account state and the user is already logged in through Chrome.
+- When a user asks to inspect Factor Lists or FactorMiner results.
+- When the task needs authenticated account state and the user is already logged in through Chrome or the in-app Browser.
 - When deciding whether to use P123 API or browser navigation for discovery.
 - When an agent needs exact AI Factor names and model display names for `AIFactorValidation()`.
 
@@ -138,4 +156,4 @@ Prefer Model A when the user asks for "best" overall, because both tie on native
 
 ## Tags
 
-#portfolio123 #p123 #chrome #ai-factor #simulated-strategies #browser-automation #native-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues
+#portfolio123 #p123 #chrome #browser #ai-factor #factor-list #ranking-system #simulated-strategies #browser-automation #native-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues
