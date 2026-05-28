@@ -136,6 +136,7 @@ For this workspace:
 
 - `docs/` Markdown is human-authored project documentation. New files should follow strict note metadata, tag, and index rules. Existing `docs/` filenames are historical audit paths; do not retroactively rename them unless explicitly asked.
 - `p123-output/` Markdown is generated research/audit output. Keep stable machine-readable filenames and existing folder names, but apply Markdown metadata/tag/index hygiene to `.md` files: YAML frontmatter, final `## Tags`, creation/update dates, single H1, clean spacing, no tabs or trailing whitespace, and UTF-8.
+- Every direct subfolder under `p123-output/` must contain a detailed `[Folder Name] Index.md` file. When adding an artifact to an existing subfolder or creating a new subfolder, update or create that subfolder index with a brief folder description, a table of contents, and an artifact inventory table covering the files in that folder.
 
 Avoid writing generated artifacts into skill folders or the user's home directory.
 
