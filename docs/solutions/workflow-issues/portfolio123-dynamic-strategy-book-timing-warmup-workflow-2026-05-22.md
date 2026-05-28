@@ -25,6 +25,12 @@ tags:
   - native-validation
   - trial-ledger
   - no-lookahead
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 Dynamic Strategy Book Timing Warmup Workflow."
 ---
 
 # Portfolio123 Dynamic Strategy Book Timing Warmup Workflow
@@ -207,3 +213,8 @@ Bad:
 - `scripts/p123_strategy_book_research.py`
 - `iteration.md`
 
+---
+
+## Tags
+
+#portfolio123 #strategy-book #timing #warmup #api-estimated #native-validation #trial-ledger #no-lookahead #algo-trading/portfolio123 #work/solutions #work/workflow-issues

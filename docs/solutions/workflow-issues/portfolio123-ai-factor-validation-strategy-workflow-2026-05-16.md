@@ -22,6 +22,12 @@ tags:
   - native-validation
   - strategy-dna
   - codex-naming
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-16
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 AI Factor Validation Strategy Workflow."
 ---
 
 # Portfolio123 AI Factor Validation Strategy Workflow
@@ -213,3 +219,9 @@ Avoid calling this a five-year result. The requested five-year native run was re
 - Local DNA log: `p123-output/strategy_dna_log_20260516.csv`
 - Live predictor report: `p123-output/live_predictor_strategy_report_20260516.md`
 - Live predictor DNA log: `p123-output/live_predictor_strategy_dna_20260516.csv`
+
+---
+
+## Tags
+
+#portfolio123 #ai-factor #simulated-strategies #aifactorvalidation #live-predictor #native-validation #strategy-dna #codex-naming #algo-trading/portfolio123 #work/solutions #work/workflow-issues

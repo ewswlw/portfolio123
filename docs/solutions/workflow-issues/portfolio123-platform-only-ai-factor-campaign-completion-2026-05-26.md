@@ -21,6 +21,12 @@ tags:
   - sharpe
   - oos
   - codex-naming
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-26
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 Platform-Only AI Factor Campaign Completion."
 ---
 
 # Portfolio123 Platform-Only AI Factor Campaign Completion
@@ -160,3 +166,9 @@ No native long-only stock AI Factor candidate met Sharpe >1.9. The best native c
 - Final campaign report: `p123-output/ai_factor_platform_oos_campaign_final_20260526.md`
 - Running campaign log: `p123-output/ai_factor_platform_oos_campaign_20260525.md`
 - Portfolio123 skill: `C:/Users/Eddy/.codex/skills/portfolio123/SKILL.md`
+
+---
+
+## Tags
+
+#portfolio123 #ai-factor #native-validation #platform-only #resource-units #sharpe #oos #codex-naming #algo-trading/portfolio123 #work/solutions #work/workflow-issues

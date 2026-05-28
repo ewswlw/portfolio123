@@ -1,0 +1,12 @@
+bucket,days,signal_dependency,ticker
+inverse,539,,DOG
+inverse,168,,PSQ
+inverse,180,,SH
+risk_on,201,,EEM
+risk_on,213,,EFA
+risk_on,429,,IWF
+risk_on,284,,IWM
+risk_on,433,,MDY
+risk_on,1538,,QQQ
+risk_on,677,,SPY
+conditional_inverse,887,inverse_enabled,SH|DOG|PSQ

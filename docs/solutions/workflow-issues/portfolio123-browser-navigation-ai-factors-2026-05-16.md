@@ -18,6 +18,12 @@ tags:
   - simulated-strategies
   - browser-automation
   - native-validation
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-16
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 Browser Navigation for Simulations and AI Factors."
 ---
 
 # Portfolio123 Browser Navigation for Simulations and AI Factors
@@ -127,3 +133,9 @@ Prefer Model A when the user asks for "best" overall, because both tie on native
 - Portfolio123 browser workflow reference: `C:/Users/Eddy/.codex/skills/portfolio123/browser-workflows.md`
 - Portfolio123 AI Factor guide: `C:/Users/Eddy/.codex/skills/portfolio123/ai-factor-guide.md`
 - Chrome skill route: use the bundled Chrome skill when the user says `ChromeChrome`, `@chrome`, or needs logged-in account state.
+
+---
+
+## Tags
+
+#portfolio123 #p123 #chrome #ai-factor #simulated-strategies #browser-automation #native-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues

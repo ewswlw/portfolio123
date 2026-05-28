@@ -5,6 +5,12 @@ status: active
 date: 2026-05-22
 created_at: 2026-05-22 13:28 America/New_York
 origin: docs/ideation/2026-05-22-dynamic-p123-strategy-book-ideation.md
+tags:
+  - algo-trading/portfolio123
+  - work/plans
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 implementation plan covering scope, workflow, validation, and deliverables for Dynamic Portfolio123 Strategy Book Research Plan."
 ---
 
 # Dynamic Portfolio123 Strategy Book Research Plan
@@ -501,3 +507,8 @@ flowchart TD
 
 Recommended next step: run `ce-work` on this plan and start with U1 through U3 before spending new broad API credits.
 
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/plans

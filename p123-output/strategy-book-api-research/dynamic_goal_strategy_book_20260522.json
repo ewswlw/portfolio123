@@ -1,0 +1,36 @@
+{
+  "constraints": {
+    "allow_inverse_etfs": true,
+    "allow_leveraged_etfs": false,
+    "candidate_strategy_inception_before": "2007-01-01",
+    "candidate_strategy_sharpe_gt": 1.0,
+    "final_label": "API-estimated nomination only; native P123 Strategy Book validation required",
+    "object_prefix": "codex_"
+  },
+  "created_at": "2026-05-22 13:41 Eastern Daylight Time",
+  "description": "Design API-estimated dynamic Portfolio123 Strategy Book candidates using expanded pre-2007 strategy discovery, P123-native timing signals, conditional inverse ETF exposure, and a tactical ETF component.",
+  "name": "dynamic_p123_strategy_book",
+  "survivor_ideas": [
+    "risk_on_risk_off_overlay",
+    "conditional_inverse_bear_sleeve",
+    "codex_tactical_etf_rotation_component",
+    "expanded_pre_2007_strategy_discovery",
+    "macro_stress_gate_with_p123_fred_constants",
+    "api_screening_then_native_tier_1_validation",
+    "small_timing_signal_ensemble"
+  ],
+  "thresholds": {
+    "cagr_min": 0.2,
+    "dsr_min": 0.95,
+    "max_drawdown_min": -0.25,
+    "psr_min": 0.95,
+    "sharpe_min": 2.0
+  },
+  "trial_accounting": {
+    "allocation": "each optimizer row tested",
+    "discovery_source": "each distinct SIM/category/source inspected",
+    "etf_component": "each tactical ETF component variant tested",
+    "timing_ensemble": "each ensemble exposure rule tested",
+    "timing_rule": "each binary timing rule variant tested"
+  }
+}

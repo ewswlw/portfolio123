@@ -1,0 +1,62 @@
+{
+  "benchmark_column": "SPY",
+  "end": "2026-01-05",
+  "lookahead_guard": "Signals are shifted one bar so date t allocation uses information available before date t return.",
+  "macro_candidates": [
+    {
+      "formula_intent": "##UST10YR - ##UST2YR > 0",
+      "name": "yield_curve_not_inverted",
+      "status": "requires_p123_macro_series_confirmation",
+      "trial_count": 0
+    },
+    {
+      "formula_intent": "##CORPBBOAS below trailing stress threshold",
+      "name": "credit_spread_not_widening",
+      "status": "requires_p123_macro_series_confirmation",
+      "trial_count": 0
+    },
+    {
+      "formula_intent": "##CPI trend not accelerating",
+      "name": "inflation_pressure_not_rising",
+      "status": "requires_p123_macro_series_confirmation",
+      "trial_count": 0
+    }
+  ],
+  "macro_note": "Macro candidates are documented but not activated until P123 macro series availability and point-in-time behavior are confirmed.",
+  "rows": 4662,
+  "source_return_panel": "p123-output/return_panel_20260522.csv",
+  "start": "2007-06-26",
+  "technical_rules": [
+    {
+      "formula_intent": "Close(0,#Bench) > SMA(200,0,#Bench)",
+      "name": "bench_above_200d",
+      "trial_count": 1,
+      "warmup_bars": 200
+    },
+    {
+      "formula_intent": "SMA(50,0,#Bench) > SMA(200,0,#Bench)",
+      "name": "bench_50d_above_200d",
+      "trial_count": 1,
+      "warmup_bars": 200
+    },
+    {
+      "formula_intent": "Close(0,#Bench) / Close(251,#Bench) - 1 > 0",
+      "name": "bench_12m_momentum_positive",
+      "trial_count": 1,
+      "warmup_bars": 252
+    },
+    {
+      "formula_intent": "Close(0,#Bench) / HiValue(252,0,#Bench) > 0.80",
+      "name": "bench_drawdown_under_20pct",
+      "trial_count": 1,
+      "warmup_bars": 252
+    },
+    {
+      "formula_intent": "Volatility(63,#Bench) below trailing median",
+      "name": "bench_volatility_below_median",
+      "trial_count": 1,
+      "warmup_bars": 252
+    }
+  ],
+  "trial_count_contribution": 6
+}

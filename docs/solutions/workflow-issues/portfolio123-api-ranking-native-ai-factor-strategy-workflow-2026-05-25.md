@@ -21,6 +21,12 @@ tags:
   - strategy-wizard
   - apirankingsystem
   - tier-2-validation
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-25
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 API Ranking Native AI Factor Strategy Workflow."
 ---
 
 # Portfolio123 API Ranking Native AI Factor Strategy Workflow
@@ -164,3 +170,9 @@ p123-output/native_strategy_ai_base87_2024_oos_baseline_YYYYMMDD.md
 - `p123-output/ranking_update_api_system_2024_oos_20260525.json`
 - `p123-output/native_strategy_1944189_details_20260525.json`
 - `p123-output/native_strategy_ai_base87_2024_oos_baseline_20260525.md`
+
+---
+
+## Tags
+
+#portfolio123 #ai-factor #api-ranking #native-simulation #aifactorvalidation #strategy-wizard #apirankingsystem #tier-2-validation #algo-trading/portfolio123 #work/solutions #work/workflow-issues

@@ -1,0 +1,56 @@
+﻿{
+    "verified_at":  "2026-05-16",
+    "ai_factor_id":  20015,
+    "ai_factor_name":  "AI Factor Base 87 Features Andreas 2",
+    "target_model":  "extra trees medium 4 #2",
+    "target_model_rank":  100,
+    "target_model_validation":  "SUCCESS Basic: 28 min, 14 sec (1.8 GB)",
+    "target_model_resource_units":  3,
+    "target_model_update_date":  "2026-04-16",
+    "target":  "3MTotReturn",
+    "target_formula":  "Future%Chg_D(65)",
+    "universe":  "No OTC Exchange + min 10 mil No Finance2",
+    "benchmark":  "S\u0026P 500 (SPY:USA)",
+    "dataset_period":  "2010-01-01 to 2025-06-21",
+    "frequency":  "Every Week",
+    "features":  87,
+    "scaling":  "Z-Score",
+    "trim":  "7.5%",
+    "outlier":  "clip",
+    "outlier_limit":  5,
+    "validation_gap":  "52 weeks",
+    "validation_method":  "Basic Holdout",
+    "training_period":  "13.5 years",
+    "holdout_period":  "12 months",
+    "results_compare":  {
+                            "rmse":  1.6371,
+                            "spearman":  0.1671,
+                            "high_avg_pct":  31.03,
+                            "high_sr":  1.11,
+                            "high_sd":  24.52,
+                            "high_turn_pct":  567,
+                            "low_avg_pct":  -17.66,
+                            "low_sr":  -0.42,
+                            "low_sd":  45.92,
+                            "low_turn_pct":  667
+                        },
+    "predictors_present":  [
+                               "extra trees III - TOF",
+                               "extra trees medium 4",
+                               "lightgbm II - GPT 6/6",
+                               "lightgbm medium 3"
+                           ],
+    "notes":  [
+                  "Target model is present on validation/models and ranks 100.",
+                  "Results compare page has native high/low portfolio diagnostics for the target model.",
+                  "Predictors tab does not list extra trees medium 4 #2 as a live predictor; use AIFactorValidation for historical testing unless implementation discovers otherwise.",
+                  "Basic Holdout means saved validation predictions are likely limited to the holdout window; exact usable strategy/ranking backtest dates still require formula-context validation."
+              ],
+    "urls":  {
+                 "models":  "https://www.portfolio123.com/sv/aiFactor/20015/validation/models",
+                 "results":  "https://www.portfolio123.com/sv/aiFactor/20015/results/compare",
+                 "predictors":  "https://www.portfolio123.com/sv/aiFactor/20015/prediction/predictors",
+                 "overview":  "https://www.portfolio123.com/sv/aiFactor/20015/overview",
+                 "method":  "https://www.portfolio123.com/sv/aiFactor/20015/validation/method"
+             }
+}

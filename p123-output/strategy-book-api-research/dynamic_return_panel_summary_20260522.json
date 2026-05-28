@@ -1,0 +1,38 @@
+{
+  "components": [
+    "strategy_1934030",
+    "strategy_1934030_timed_200d",
+    "strategy_1934030_timed_ensemble",
+    "strategy_1934014",
+    "strategy_1934014_timed_200d",
+    "strategy_1934014_timed_ensemble",
+    "strategy_1873038",
+    "strategy_1873038_timed_200d",
+    "strategy_1873038_timed_ensemble",
+    "strategy_1934023",
+    "strategy_1934023_timed_200d",
+    "strategy_1934023_timed_ensemble",
+    "strategy_1934037",
+    "strategy_1934037_timed_200d",
+    "strategy_1934037_timed_ensemble",
+    "conditional_inverse_sleeve",
+    "tactical_etf_component",
+    "defensive_proxy_component"
+  ],
+  "conditional_inverse_days": 887,
+  "defensive_component": "defensive_proxy_component",
+  "end": "2026-01-05",
+  "raw_strategy_components": [
+    "strategy_1934030",
+    "strategy_1934014",
+    "strategy_1873038",
+    "strategy_1934023",
+    "strategy_1934037"
+  ],
+  "rows": 4662,
+  "source_return_panel": "p123-output/return_panel_20260522.csv",
+  "source_timing_panel": "p123-output/timing_signal_panel_20260522.csv",
+  "start": "2007-06-26",
+  "tactical_component": "tactical_etf_component",
+  "trial_count_contribution": 12
+}

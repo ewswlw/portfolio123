@@ -1,4 +1,4 @@
-﻿# Portfolio123 Research Workspace
+# Portfolio123 Research Workspace
 
 This workspace is for full-lifecycle Portfolio123 strategy development and research using both:
 
@@ -130,7 +130,12 @@ Use filenames that include the operation and date, for example:
 - `ai_factor_models_top_YYYYMMDD.csv`
 - `strategy_validation_<strategy-id>_YYYYMMDD.json`
 
-Every newly created Markdown file must show its creation date and time at the top. For plain Markdown, make the first line `Created: YYYY-MM-DD HH:MM <timezone>`. For Markdown files with YAML frontmatter, include `created_at: YYYY-MM-DD HH:MM <timezone>` inside the frontmatter.
+Follow the global Markdown standards in `C:/Users/Eddy/.codex/rules/Markdown Standards.md`.
+
+For this workspace:
+
+- `docs/` Markdown is human-authored project documentation. New files should follow strict note metadata, tag, and index rules. Existing `docs/` filenames are historical audit paths; do not retroactively rename them unless explicitly asked.
+- `p123-output/` Markdown is generated research/audit output. Keep stable machine-readable filenames and existing folder names, but apply Markdown metadata/tag/index hygiene to `.md` files: YAML frontmatter, final `## Tags`, creation/update dates, single H1, clean spacing, no tabs or trailing whitespace, and UTF-8.
 
 Avoid writing generated artifacts into skill folders or the user's home directory.
 
@@ -170,4 +175,3 @@ Keep every Portfolio123 object created by agents prefixed with `codex_` unless t
 - Before non-trivial Portfolio123 work, agents should search `docs/solutions/` for compounded P123 workflow learnings.
 - This workspace is a Git repository on branch `main`; `.codex/`, `p123-output/`, and `secrets/` are intentionally ignored.
 - For Portfolio123 live `AIFactor(...)` strategy tests, predictor existence or dataset history does not imply full-history backtestability; verify the accepted native simulation window and consult the AI Factor validation workflow learning.
-

@@ -26,6 +26,12 @@ tags:
   - hedge
   - shy
   - tier1
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 Native Strategy Book Replication Workflow."
 ---
 
 # Portfolio123 Native Strategy Book Replication Workflow
@@ -225,3 +231,9 @@ match the intended full risk-off substitution into SHY.
 - `docs/solutions/workflow-issues/portfolio123-api-strategy-book-research-workflow-2026-05-22.md`
 - `docs/plans/2026-05-22-005-native-p123-replication-execution-plan.md`
 - `docs/ideation/2026-05-22-native-p123-replication-ideation.md`
+
+---
+
+## Tags
+
+#portfolio123 #strategy-book #native-validation #browser-automation #comp-props #hedge #shy #tier1 #algo-trading/portfolio123 #work/solutions #work/workflow-issues

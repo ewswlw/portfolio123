@@ -1,4 +1,12 @@
-Created: 2026-05-22 15:20 America/New_York
+---
+title: "Native P123 Dynamic Strategy Book Replication Ideation"
+tags:
+  - algo-trading/portfolio123
+  - work/ideation
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 ideation note evaluating strategy research options for Native P123 Dynamic Strategy Book Replication Ideation."
+---
 
 # Native P123 Dynamic Strategy Book Replication Ideation
 
@@ -221,3 +229,9 @@ Use a gated execution flow:
 3. If exact route exists, create `codex_dynamic_*` objects and run within the 5-run budget.
 4. If exact route does not exist, stop with a blocked/approximation decision rather than improvise.
 5. Always write final evidence with status matrix and tier labeling.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/ideation

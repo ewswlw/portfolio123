@@ -1,0 +1,264 @@
+{
+  "discovery_sources_count": 1,
+  "included_count": 5,
+  "input_files": [
+    "p123-output/candidate_strategy_discovery_20260522.json"
+  ],
+  "note": "Browser/SIM values are discovery-only; performance validation must use API or native P123 outputs.",
+  "rows": [
+    {
+      "displayed_sharpe": 1.17,
+      "inception_date": "2006-01-01",
+      "included": true,
+      "name": "Canada Core Combo - Eddy/Kurtis",
+      "raw_text": "Canada Core Combo - Eddy/Kurtis Toronto Stock Exchange Stock Core Combo Canada -\u2026 01/01/06 01/06/26 20 21.7% 13.3% 1.17 -42.4%",
+      "reason": "included",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1873038"
+    },
+    {
+      "displayed_sharpe": 0.72,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Future Free Cash Flow Yield S&P 500",
+      "raw_text": "Future Free Cash Flow Yield S&P 500 S&P500 LargeCap (IVV) Stock ConsEstMean(#FCFY ,\u2026 01/01/06 01/19/26 10 17.0% 6.0% 0.72 -53.3%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1873043"
+    },
+    {
+      "displayed_sharpe": null,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Buffett 2000",
+      "raw_text": "Buffett 2000 Prussell 2000 Stock Buffett's Core C\u2026 01/01/06 01/05/26 20 13.5% 2.6% N/A N/A",
+      "reason": "missing_sharpe",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1873055"
+    },
+    {
+      "displayed_sharpe": 0.76,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Easy to Trade US Growth...ctuals + IndusEPS Group",
+      "raw_text": "Easy to Trade US Growth...ctuals + IndusEPS Group Easy to Trade US Stock Core: Sentiment + Mk\u2026 01/01/06 01/12/26 20 17.1% 6.1% 0.76 -66.4%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1873057"
+    },
+    {
+      "displayed_sharpe": 0.9,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Some of my Favorite Sell Rules - Copy",
+      "raw_text": "Some of my Favorite Sell Rules - Copy Easy to Trade US - 1-on-1 100K Stock Small and Micro Cap\u2026 01/01/06 04/05/26 12 23.4% 12.9% 0.90 -65.2%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1911139"
+    },
+    {
+      "displayed_sharpe": 0.6,
+      "inception_date": "1999-01-02",
+      "included": false,
+      "name": "ETF Simulation",
+      "raw_text": "ETF Simulation SPY-TLT-GLD Momentum ETF ETF Rotation - Basic 01/02/99 04/05/26 1 10.8% 2.6% 0.60 -33.9%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1929845"
+    },
+    {
+      "displayed_sharpe": 0.92,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Higher Beta + Earnings ...niverse, Free! C - Copy",
+      "raw_text": "Higher Beta + Earnings ...niverse, Free! C - Copy S&P500 LargeCap (IVV) Stock Core Combination 01/01/06 04/19/26 9 23.3% 14.4% 0.92 -54.3%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1933777"
+    },
+    {
+      "displayed_sharpe": 0.61,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Advisor 500 Adjusted Free Cash Flow Yield - Copy",
+      "raw_text": "Advisor 500 Adjusted Free Cash Flow Yield - Copy S&P500 LargeCap (IVV) Stock (OperCashFlttm- DepA\u2026 01/01/06 04/20/26 30 13.1% 2.2% 0.61 -63.3%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1933989"
+    },
+    {
+      "displayed_sharpe": 0.81,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Russel 3000 Profitable Growth Stocks Free! - Copy",
+      "raw_text": "Russel 3000 Profitable Growth Stocks Free! - Copy Prussell 3000 Stock Core: Sentiment + Mk\u2026 01/01/06 04/20/26 20 16.1% 5.1% 0.81 -56.6%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934012"
+    },
+    {
+      "displayed_sharpe": 1.29,
+      "inception_date": "2006-01-01",
+      "included": true,
+      "name": "SAMCF + Quality Filter Group - Copy",
+      "raw_text": "SAMCF + Quality Filter Group - Copy No OTC Exchange Stock Small and Micro Cap\u2026 01/01/06 04/20/26 46 31.3% 20.3% 1.29 -50.9%",
+      "reason": "included",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934014"
+    },
+    {
+      "displayed_sharpe": 0.8,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Easy to Trade US Growth...ndusEPS Group HC - Copy",
+      "raw_text": "Easy to Trade US Growth...ndusEPS Group HC - Copy Easy to Trade US Stock Core: Sentiment + Mk\u2026 01/01/06 04/20/26 18 19.4% 8.4% 0.80 -69.8%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934020"
+    },
+    {
+      "displayed_sharpe": 1.11,
+      "inception_date": "2006-01-01",
+      "included": true,
+      "name": "Small Cap Focus - Small...erse - Small AUM - Copy",
+      "raw_text": "Small Cap Focus - Small...erse - Small AUM - Copy No OTC Exchange + min 10 mil min vol Stock Small and Micro Cap\u2026 01/01/06 04/20/26 20 30.5% 21.8% 1.11 -65.7%",
+      "reason": "included",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934023"
+    },
+    {
+      "displayed_sharpe": 1.37,
+      "inception_date": "2006-01-01",
+      "included": true,
+      "name": "Small Caps + Altman in Ranking + Altman > 1 - Copy",
+      "raw_text": "Small Caps + Altman in Ranking + Altman > 1 - Copy No OTC Exchange Stock Small and Micro Cap\u2026 01/01/06 04/20/26 25 34.2% 23.2% 1.37 -53.0%",
+      "reason": "included",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934030"
+    },
+    {
+      "displayed_sharpe": 0.69,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Mid and Big Cap Higher Beta (aggressive!) - Copy",
+      "raw_text": "Mid and Big Cap Higher Beta (aggressive!) - Copy Prussell 3000 Stock IBD SmartSelect Clea\u2026 01/01/06 04/20/26 27 18.7% 7.7% 0.69 -69.6%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934031"
+    },
+    {
+      "displayed_sharpe": 0.98,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Easy to Trade US Forwar...ek Rebalance - G - Copy",
+      "raw_text": "Easy to Trade US Forwar...ek Rebalance - G - Copy Easy to Trade US Stock Focus Value Forward\u2026 01/01/06 04/20/26 25 22.5% 11.5% 0.98 -51.7%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934032"
+    },
+    {
+      "displayed_sharpe": 0.74,
+      "inception_date": "2006-01-01",
+      "included": false,
+      "name": "Buffett Quality Value (Russell 3000) - Copy",
+      "raw_text": "Buffett Quality Value (Russell 3000) - Copy Prussell 3000 Stock Buffett's Alpha 01/01/06 04/20/26 22 12.4% 1.5% 0.74 -47.0%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934033"
+    },
+    {
+      "displayed_sharpe": 1.01,
+      "inception_date": "2006-01-01",
+      "included": true,
+      "name": "Advisor TSX Mighty Mouse Momentum - Copy",
+      "raw_text": "Advisor TSX Mighty Mouse Momentum - Copy Toronto Stock Exchange Stock Canada Momentum V-G-\u2026 01/01/06 04/20/26 30 18.3% 9.7% 1.01 -40.6%",
+      "reason": "included",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934037"
+    },
+    {
+      "displayed_sharpe": 1.08,
+      "inception_date": "2021-04-21",
+      "included": false,
+      "name": "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+      "raw_text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2 No OTC Exchange + min 10 mil min vol - OWN Stock AI SCs Small and Mic\u2026 04/21/21 04/21/26 30 24.2% 11.4% 1.08 -20.7%",
+      "reason": "inception_not_before_2007",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1934127"
+    },
+    {
+      "displayed_sharpe": 0.8,
+      "inception_date": "2024-06-22",
+      "included": false,
+      "name": "codex_strategy_ai_base87_et2_clean_v1",
+      "raw_text": "codex_strategy_ai_base87_et2_clean_v1 No OTC Exchange + min 10 mil No Finance2 Stock codex_ranking_ai_bas\u2026 06/22/24 05/16/26 19 19.2% 8.6% 0.80 -24.7%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1941640"
+    },
+    {
+      "displayed_sharpe": 0.74,
+      "inception_date": "2024-06-22",
+      "included": false,
+      "name": "codex_strategy_ai_base87_et2_v2_conc10",
+      "raw_text": "codex_strategy_ai_base87_et2_v2_conc10 No OTC Exchange + min 10 mil No Finance2 Stock codex_ranking_ai_bas\u2026 06/22/24 05/16/26 9 23.2% 12.7% 0.74 -27.1%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1941642"
+    },
+    {
+      "displayed_sharpe": 0.25,
+      "inception_date": "2024-06-22",
+      "included": false,
+      "name": "codex_strategy_ai_base87_et2_v3_mid15",
+      "raw_text": "codex_strategy_ai_base87_et2_v3_mid15 No OTC Exchange + min 10 mil No Finance2 Stock codex_ranking_ai_bas\u2026 06/22/24 05/16/26 13 13.4% 2.9% 0.25 -24.8%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1941643"
+    },
+    {
+      "displayed_sharpe": 0.77,
+      "inception_date": "2024-06-22",
+      "included": false,
+      "name": "codex_strategy_ai_base87_et2_v4_smooth30",
+      "raw_text": "codex_strategy_ai_base87_et2_v4_smooth30 No OTC Exchange + min 10 mil No Finance2 Stock codex_ranking_ai_bas\u2026 06/22/24 05/16/26 30 21.6% 11.1% 0.77 -24.8%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1941644"
+    },
+    {
+      "displayed_sharpe": 0.43,
+      "inception_date": "2026-01-19",
+      "included": false,
+      "name": "codex_strategy_ai_base87_live_v1_5y_conc10",
+      "raw_text": "codex_strategy_ai_base87_live_v1_5y_conc10 No OTC Exchange + min 10 mil No Finance2 Stock codex_ranking_ai_bas\u2026 01/19/26 05/16/26 10 1.7% -22.6% 0.43 -18.3%",
+      "reason": "sharpe_not_gt_1",
+      "source_count": 1,
+      "sources": "candidate_strategy_discovery_20260522",
+      "strategy_id": "1941664"
+    }
+  ],
+  "trial_count_contribution": 1
+}

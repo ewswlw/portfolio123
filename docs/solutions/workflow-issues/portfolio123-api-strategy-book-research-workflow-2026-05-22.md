@@ -24,6 +24,12 @@ tags:
   - no-winner-report
   - dsr
   - return-panel
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 API-Only Strategy Book Research Workflow."
 ---
 
 # Portfolio123 API-Only Strategy Book Research Workflow
@@ -185,3 +191,9 @@ p123-output/strict_no_winner_report_YYYYMMDD_strict_sh2_dd25.md
 - `docs/plans/2026-05-22-002-feat-api-only-p123-strategy-book-plan.md`
 - `iteration.md`
 - `scripts/p123_strategy_book_research.py`
+
+---
+
+## Tags
+
+#portfolio123 #strategy-book #api-only #trial-ledger #inverse-etfs #no-winner-report #dsr #return-panel #algo-trading/portfolio123 #work/solutions #work/workflow-issues

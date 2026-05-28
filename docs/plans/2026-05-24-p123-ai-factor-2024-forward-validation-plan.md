@@ -1,4 +1,12 @@
-Created: 2026-05-24 15:47 -04:00
+---
+title: "P123 AI Factor 2024-Forward Validation Plan"
+tags:
+  - algo-trading/portfolio123
+  - work/plans
+created: 2026-05-24
+updated: 2026-05-28
+description: "Portfolio123 implementation plan covering scope, workflow, validation, and deliverables for P123 AI Factor 2024-Forward Validation Plan."
+---
 
 # P123 AI Factor 2024-Forward Validation Plan
 
@@ -234,3 +242,9 @@ Strong successful outcome:
 - The 2024-focused strategy is positive versus SPY and the eligible universe.
 - The robustness run shows persistent top-bucket strength across folds or halves.
 - Turnover and drawdown are practical enough to justify further strategy development.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/plans

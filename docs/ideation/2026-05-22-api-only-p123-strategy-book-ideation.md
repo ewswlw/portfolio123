@@ -1,9 +1,16 @@
 ---
+title: "Ideation: API-Only Portfolio123 Strategy Book Candidate Design"
 created_at: 2026-05-22 12:45 America/New_York
 date: 2026-05-22
 topic: api-only-p123-strategy-book
 focus: "Stronger ideas for API-only Portfolio123 Strategy Book candidate design"
 mode: repo-grounded
+tags:
+  - algo-trading/portfolio123
+  - work/ideation
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 ideation note evaluating strategy research options for Ideation: API-Only Portfolio123 Strategy Book Candidate Design."
 ---
 
 # Ideation: API-Only Portfolio123 Strategy Book Candidate Design
@@ -176,3 +183,9 @@ External grounding:
 ## Suggested Next Step
 
 Use `ce-brainstorm` on Idea 5, `Credit-Aware Stoplight API Plan`, if the next action is to sharpen implementation sequencing before running API calls. It has high leverage because it determines how quickly the workflow learns whether the problem is feasible without wasting Portfolio123 credits.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/ideation

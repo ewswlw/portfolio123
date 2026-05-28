@@ -1,0 +1,6 @@
+holdings_rows,lane,name,reason,strategy_id,summary_keys,transactions_rows
+,tradable_stream,Small Caps + Altman in Ranking + Altman > 1 - Copy,dailyPerf_ret_stream_available,1934030,"cost,dailyPerf,quotaRemaining,stats,summary",3172
+,tradable_stream,SAMCF + Quality Filter Group - Copy,dailyPerf_ret_stream_available,1934014,"cost,dailyPerf,quotaRemaining,stats,summary",6249
+,tradable_stream,Canada Core Combo - Eddy/Kurtis,dailyPerf_ret_stream_available,1873038,"cost,dailyPerf,quotaRemaining,stats,summary",3908
+,tradable_stream,Small Cap Focus - Small...erse - Small AUM - Copy,dailyPerf_ret_stream_available,1934023,"cost,dailyPerf,quotaRemaining,stats,summary",2794
+,tradable_stream,Advisor TSX Mighty Mouse Momentum - Copy,dailyPerf_ret_stream_available,1934037,"cost,dailyPerf,quotaRemaining,stats,summary",13875

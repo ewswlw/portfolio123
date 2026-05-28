@@ -4,6 +4,12 @@ type: feat
 status: active
 date: 2026-05-16
 origin: project-spec.md
+tags:
+  - algo-trading/portfolio123
+  - work/plans
+created: 2026-05-16
+updated: 2026-05-28
+description: "Portfolio123 implementation plan covering scope, workflow, validation, and deliverables for Portfolio123 AI Factor Simulated Strategy Execution Plan."
 ---
 
 # Portfolio123 AI Factor Simulated Strategy Execution Plan
@@ -410,3 +416,9 @@ flowchart TD
 - **Top AI Factor output:** `p123-output/ai_factor_models_top_20260516.csv`
 - **Navigation learning:** `docs/solutions/workflow-issues/portfolio123-browser-navigation-ai-factors-2026-05-16.md`
 - **Portfolio123 skill:** global Codex skill `portfolio123`
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/plans

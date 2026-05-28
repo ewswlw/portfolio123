@@ -5,6 +5,12 @@ status: completed
 date: 2026-05-22
 created_at: 2026-05-22 12:35 America/New_York
 origin: docs/ideation/2026-05-22-api-only-p123-strategy-book-ideation.md
+tags:
+  - algo-trading/portfolio123
+  - work/plans
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 implementation plan covering scope, workflow, validation, and deliverables for API-Only Portfolio123 Strategy Book Candidate Plan."
 ---
 
 # API-Only Portfolio123 Strategy Book Candidate Plan
@@ -551,3 +557,9 @@ flowchart TD
 - Workspace rules: `AGENTS.md`
 - Related learning: `docs/solutions/workflow-issues/portfolio123-browser-navigation-ai-factors-2026-05-16.md`
 - Related learning: `docs/solutions/workflow-issues/portfolio123-browser-login-encrypted-credentials-2026-05-22.md`
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/plans

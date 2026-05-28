@@ -1,4 +1,12 @@
-Created: 2026-05-24 15:47 -04:00
+---
+title: "P123 AI Factor 2024-Forward Validation Ideation"
+tags:
+  - algo-trading/portfolio123
+  - work/ideation
+created: 2026-05-24
+updated: 2026-05-28
+description: "Portfolio123 ideation note evaluating strategy research options for P123 AI Factor 2024-Forward Validation Ideation."
+---
 
 # P123 AI Factor 2024-Forward Validation Ideation
 
@@ -90,3 +98,9 @@ This is the best balance of preserving the underlying AI strategy idea and avoid
 - Confirm the exact validation method fields P123 exposes for this account.
 - Confirm estimated resource units before running validation.
 - Confirm the exact first saved prediction date after training succeeds.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/ideation

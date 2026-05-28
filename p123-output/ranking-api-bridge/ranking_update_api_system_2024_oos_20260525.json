@@ -1,0 +1,12 @@
+{
+  "request": {
+    "nodes": "<RankingSystem RankType=\"Higher\">\n\t<StockFormula Weight=\"0\" RankType=\"Higher\" Name=\"codex_ai_base87_2024_oos\" Description=\"codex 2024 OOS validation - extra trees medium 4 #2\" Scope=\"Universe\">\n\t\t<Formula>AIFactorValidation(&quot;codex_ai_base87_etm4_2024_oos_v1&quot;, &quot;extra trees medium 4&quot;, &quot;2&quot;)</Formula>\n\t</StockFormula>\n</RankingSystem>",
+    "type": "stock",
+    "rankingMethod": 2
+  },
+  "response": {
+    "cost": 1,
+    "quotaRemaining": 7351
+  },
+  "ok": true
+}

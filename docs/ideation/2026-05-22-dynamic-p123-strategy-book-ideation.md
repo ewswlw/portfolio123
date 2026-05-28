@@ -1,9 +1,16 @@
 ---
+title: "Ideation: Dynamic Portfolio123 Strategy Book Push"
 created_at: 2026-05-22 13:27 America/New_York
 date: 2026-05-22
 topic: dynamic-p123-strategy-book
 focus: "Combine market timing overlay, timed inverse ETFs, tactical ETF component, and expanded pre-2007 strategy discovery for a Portfolio123 Strategy Book targeting CAGR >20%, Sharpe >2.0, max drawdown better than -25%."
 mode: repo-grounded
+tags:
+  - algo-trading/portfolio123
+  - work/ideation
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 ideation note evaluating strategy research options for Ideation: Dynamic Portfolio123 Strategy Book Push."
 ---
 
 # Ideation: Dynamic Portfolio123 Strategy Book Push
@@ -172,3 +179,8 @@ The strongest next `ce-brainstorm` seed is:
 
 > Design a P123-native dynamic Strategy Book research campaign that combines more pre-2007 strategy discovery, a binary market timing overlay, conditional inverse ETF exposure, and a tactical ETF rotation component, with API-estimated screening first and native Strategy Book validation only for promoted candidates.
 
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/ideation

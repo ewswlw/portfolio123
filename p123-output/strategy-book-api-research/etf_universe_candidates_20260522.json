@@ -1,0 +1,647 @@
+{
+  "api_calls": [
+    {
+      "cost": null,
+      "label": "data_prices:SPY",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:DIA",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:QQQ",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IWM",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IWB",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IWD",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IWF",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:MDY",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IJR",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLB",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLE",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLF",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLI",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLK",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLP",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLU",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLV",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:XLY",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EFA",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EEM",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWJ",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWG",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWU",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWC",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWA",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:EWH",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:FXI",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:AGG",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:SHY",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IEF",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:TLT",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:LQD",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:GLD",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:SLV",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:DBC",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:IYR",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:VNQ",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:SH",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:DOG",
+      "quotaRemaining": null
+    },
+    {
+      "cost": null,
+      "label": "data_prices:PSQ",
+      "quotaRemaining": null
+    }
+  ],
+  "estimated_credits": 40,
+  "rows": [
+    {
+      "eligible": true,
+      "family": "us_broad_equity",
+      "first_date": "1993-01-29",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 8385,
+      "ticker": "SPY"
+    },
+    {
+      "eligible": true,
+      "family": "us_broad_equity",
+      "first_date": "1998-01-20",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7129,
+      "ticker": "DIA"
+    },
+    {
+      "eligible": true,
+      "family": "us_growth_equity",
+      "first_date": "1998-12-31",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6889,
+      "ticker": "QQQ"
+    },
+    {
+      "eligible": true,
+      "family": "us_small_cap",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "IWM"
+    },
+    {
+      "eligible": true,
+      "family": "us_large_cap",
+      "first_date": "1996-12-31",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7393,
+      "ticker": "IWB"
+    },
+    {
+      "eligible": true,
+      "family": "us_value",
+      "first_date": "1994-12-30",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7900,
+      "ticker": "IWD"
+    },
+    {
+      "eligible": true,
+      "family": "us_growth",
+      "first_date": "1994-12-30",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7900,
+      "ticker": "IWF"
+    },
+    {
+      "eligible": true,
+      "family": "us_mid_cap",
+      "first_date": "1995-05-12",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7808,
+      "ticker": "MDY"
+    },
+    {
+      "eligible": true,
+      "family": "us_small_cap",
+      "first_date": "2000-05-26",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6535,
+      "ticker": "IJR"
+    },
+    {
+      "eligible": true,
+      "family": "sector_materials",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLB"
+    },
+    {
+      "eligible": true,
+      "family": "sector_energy",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "XLE"
+    },
+    {
+      "eligible": true,
+      "family": "sector_financials",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLF"
+    },
+    {
+      "eligible": true,
+      "family": "sector_industrials",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLI"
+    },
+    {
+      "eligible": true,
+      "family": "sector_technology",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLK"
+    },
+    {
+      "eligible": true,
+      "family": "sector_staples",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLP"
+    },
+    {
+      "eligible": true,
+      "family": "sector_utilities",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLU"
+    },
+    {
+      "eligible": true,
+      "family": "sector_healthcare",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLV"
+    },
+    {
+      "eligible": true,
+      "family": "sector_discretionary",
+      "first_date": "1998-12-22",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6895,
+      "ticker": "XLY"
+    },
+    {
+      "eligible": true,
+      "family": "international_developed",
+      "first_date": "2001-08-17",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6226,
+      "ticker": "EFA"
+    },
+    {
+      "eligible": true,
+      "family": "international_emerging",
+      "first_date": "2003-04-11",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 5815,
+      "ticker": "EEM"
+    },
+    {
+      "eligible": true,
+      "family": "country_japan",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7594,
+      "ticker": "EWJ"
+    },
+    {
+      "eligible": true,
+      "family": "country_germany",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7585,
+      "ticker": "EWG"
+    },
+    {
+      "eligible": true,
+      "family": "country_uk",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7535,
+      "ticker": "EWU"
+    },
+    {
+      "eligible": true,
+      "family": "country_canada",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7526,
+      "ticker": "EWC"
+    },
+    {
+      "eligible": true,
+      "family": "country_australia",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7575,
+      "ticker": "EWA"
+    },
+    {
+      "eligible": true,
+      "family": "country_hong_kong",
+      "first_date": "1996-03-18",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7588,
+      "ticker": "EWH"
+    },
+    {
+      "eligible": true,
+      "family": "country_china",
+      "first_date": "2004-10-08",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 5439,
+      "ticker": "FXI"
+    },
+    {
+      "eligible": true,
+      "family": "bond_aggregate",
+      "first_date": "2003-09-26",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 5699,
+      "ticker": "AGG"
+    },
+    {
+      "eligible": true,
+      "family": "bond_short_treasury",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "SHY"
+    },
+    {
+      "eligible": true,
+      "family": "bond_intermediate_treasury",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "IEF"
+    },
+    {
+      "eligible": true,
+      "family": "bond_long_treasury",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "TLT"
+    },
+    {
+      "eligible": true,
+      "family": "bond_investment_grade_credit",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "LQD"
+    },
+    {
+      "eligible": true,
+      "family": "gold",
+      "first_date": "1968-04-01",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 14677,
+      "ticker": "GLD"
+    },
+    {
+      "eligible": true,
+      "family": "silver",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "SLV"
+    },
+    {
+      "eligible": true,
+      "family": "commodities",
+      "first_date": "1998-12-31",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6889,
+      "ticker": "DBC"
+    },
+    {
+      "eligible": true,
+      "family": "real_estate",
+      "first_date": "2000-06-16",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 6521,
+      "ticker": "IYR"
+    },
+    {
+      "eligible": true,
+      "family": "real_estate",
+      "first_date": "1994-12-28",
+      "inverse": false,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "VNQ"
+    },
+    {
+      "eligible": true,
+      "family": "inverse_sp500",
+      "first_date": "1994-12-28",
+      "inverse": true,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 7902,
+      "ticker": "SH"
+    },
+    {
+      "eligible": true,
+      "family": "inverse_dow",
+      "first_date": "2006-06-21",
+      "inverse": true,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 5011,
+      "ticker": "DOG"
+    },
+    {
+      "eligible": true,
+      "family": "inverse_nasdaq100",
+      "first_date": "2006-06-21",
+      "inverse": true,
+      "last_date": "2026-05-21",
+      "leveraged": false,
+      "reason": "eligible",
+      "rows": 5011,
+      "ticker": "PSQ"
+    }
+  ]
+}

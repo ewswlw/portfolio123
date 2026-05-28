@@ -1,0 +1,27 @@
+{
+  "constraints": {
+    "allow_inverse_etfs": true,
+    "allow_leveraged_etfs": false,
+    "api_credit_stop": 250,
+    "candidate_strategy_inception_before": "2007-01-01",
+    "candidate_strategy_sharpe_gt": 1.0,
+    "final_label": "API-estimated candidate research, not native Tier 1 Strategy Book validation",
+    "max_component_weight": 0.25,
+    "max_inverse_sleeve_weight": 0.35
+  },
+  "created_at": "2026-05-22 12:46 Eastern Daylight Time",
+  "description": "Design an API-estimated Portfolio123 Strategy Book candidate from eligible simulated strategies and pre-2007 ETFs, including inverse ETFs.",
+  "name": "api_only_p123_strategy_book",
+  "optimizer_ladder": [
+    "equal_weight",
+    "inverse_volatility",
+    "hrp",
+    "constrained_ensemble"
+  ],
+  "thresholds": {
+    "cagr_min": 0.2,
+    "dsr_min": 0.95,
+    "psr_min": 0.95,
+    "sharpe_min": 1.6
+  }
+}

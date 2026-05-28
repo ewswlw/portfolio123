@@ -1,0 +1,102 @@
+{
+  "api_calls": [
+    {
+      "cost": 1,
+      "label": "strategy:1934030",
+      "quotaRemaining": 7401
+    },
+    {
+      "cost": null,
+      "label": "strategy_transactions:1934030",
+      "quotaRemaining": null
+    },
+    {
+      "cost": 1,
+      "label": "strategy:1934014",
+      "quotaRemaining": 7399
+    },
+    {
+      "cost": null,
+      "label": "strategy_transactions:1934014",
+      "quotaRemaining": null
+    },
+    {
+      "cost": 1,
+      "label": "strategy:1873038",
+      "quotaRemaining": 7397
+    },
+    {
+      "cost": null,
+      "label": "strategy_transactions:1873038",
+      "quotaRemaining": null
+    },
+    {
+      "cost": 1,
+      "label": "strategy:1934023",
+      "quotaRemaining": 7395
+    },
+    {
+      "cost": null,
+      "label": "strategy_transactions:1934023",
+      "quotaRemaining": null
+    },
+    {
+      "cost": 1,
+      "label": "strategy:1934037",
+      "quotaRemaining": 7393
+    },
+    {
+      "cost": null,
+      "label": "strategy_transactions:1934037",
+      "quotaRemaining": null
+    }
+  ],
+  "estimated_credits": 16,
+  "rows": [
+    {
+      "holdings_rows": null,
+      "lane": "tradable_stream",
+      "name": "Small Caps + Altman in Ranking + Altman > 1 - Copy",
+      "reason": "dailyPerf_ret_stream_available",
+      "strategy_id": 1934030,
+      "summary_keys": "cost,dailyPerf,quotaRemaining,stats,summary",
+      "transactions_rows": 3172
+    },
+    {
+      "holdings_rows": null,
+      "lane": "tradable_stream",
+      "name": "SAMCF + Quality Filter Group - Copy",
+      "reason": "dailyPerf_ret_stream_available",
+      "strategy_id": 1934014,
+      "summary_keys": "cost,dailyPerf,quotaRemaining,stats,summary",
+      "transactions_rows": 6249
+    },
+    {
+      "holdings_rows": null,
+      "lane": "tradable_stream",
+      "name": "Canada Core Combo - Eddy/Kurtis",
+      "reason": "dailyPerf_ret_stream_available",
+      "strategy_id": 1873038,
+      "summary_keys": "cost,dailyPerf,quotaRemaining,stats,summary",
+      "transactions_rows": 3908
+    },
+    {
+      "holdings_rows": null,
+      "lane": "tradable_stream",
+      "name": "Small Cap Focus - Small...erse - Small AUM - Copy",
+      "reason": "dailyPerf_ret_stream_available",
+      "strategy_id": 1934023,
+      "summary_keys": "cost,dailyPerf,quotaRemaining,stats,summary",
+      "transactions_rows": 2794
+    },
+    {
+      "holdings_rows": null,
+      "lane": "tradable_stream",
+      "name": "Advisor TSX Mighty Mouse Momentum - Copy",
+      "reason": "dailyPerf_ret_stream_available",
+      "strategy_id": 1934037,
+      "summary_keys": "cost,dailyPerf,quotaRemaining,stats,summary",
+      "transactions_rows": 13875
+    }
+  ]
+}

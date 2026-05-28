@@ -1,0 +1,7097 @@
+{
+  "created_at": "2026-05-24 15:47 -04:00",
+  "source": "Portfolio123 browser capture",
+  "aiFactor": {
+    "id": 20015,
+    "name": "AI Factor Base 87 Features Andreas 2"
+  },
+  "exactFormulaInfo": {
+    "modelDisplayRow": "extra trees medium 4 #2",
+    "exactFormula": "AIFactorValidation(\"AI Factor Base 87 Features Andreas 2\", \"extra trees medium 4\", \"2\")",
+    "universe": "No OTC Exchange + min 10 mil No Finance2",
+    "period": "06/22/2024 - 06/21/2025",
+    "frequency": "Every Week",
+    "source": "Portfolio123 Validation Prediction Formula dialog"
+  },
+  "pages": [
+    {
+      "name": "overview",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Target & Universe",
+        "Target\t3MTotReturn",
+        "Target Normalization\tDate",
+        "Formula\tFuture%Chg_D(65)",
+        "Universe\tNo OTC Exchange + min 10 mil No Finance2",
+        "Benchmark\tS&P 500 (SPY:USA)",
+        "Dataset",
+        "Period\t2010-01-01 to 2025-06-21",
+        "(15.5 years)",
+        "Frequency\tEvery Week",
+        "Max Return\t999%",
+        "Features\t87",
+        "Normalization",
+        "Scaling\tZ-Score",
+        "Trim\t7.5%",
+        "Outlier\tclip",
+        "Outlier Limit\t5",
+        "Validation",
+        "Gap\t52 weeks",
+        "Method\tBasic Holdout",
+        "Training Period\t13.5 years",
+        "Holdout Period\t12 months",
+        "Testing\tNo",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/app/universe/summary/320031",
+          "text": "No OTC Exchange + min 10 mil No Finance2"
+        },
+        {
+          "href": "/sv/aiFactor/27238/overview",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/overview",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/overview",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/overview",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/overview",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/overview",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/overview",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/overview",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/overview",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/overview",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/overview",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/overview",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/overview",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/overview",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Target & Universe",
+            "Target",
+            "Target Normalization",
+            "Formula",
+            "Universe",
+            "Benchmark"
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "Target & Universe"
+            ],
+            [
+              "Target",
+              "3MTotReturn"
+            ],
+            [
+              "Target Normalization",
+              "Date"
+            ],
+            [
+              "Formula",
+              "Future%Chg_D(65)"
+            ],
+            [
+              "Universe",
+              "No OTC Exchange + min 10 mil No Finance2"
+            ],
+            [
+              "Benchmark",
+              "S&P 500 (SPY:USA)"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "Dataset",
+            "Period",
+            "Frequency",
+            "Max Return",
+            "Features"
+          ],
+          "index": 1,
+          "rows": [
+            [
+              "Dataset"
+            ],
+            [
+              "Period",
+              "2010-01-01 to 2025-06-21 (15.5 years)"
+            ],
+            [
+              "Frequency",
+              "Every Week"
+            ],
+            [
+              "Max Return",
+              "999%"
+            ],
+            [
+              "Features",
+              "87"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "Normalization",
+            "Scaling",
+            "Trim",
+            "Outlier",
+            "Outlier Limit"
+          ],
+          "index": 2,
+          "rows": [
+            [
+              "Normalization"
+            ],
+            [
+              "Scaling",
+              "Z-Score"
+            ],
+            [
+              "Trim",
+              "7.5%"
+            ],
+            [
+              "Outlier",
+              "clip"
+            ],
+            [
+              "Outlier Limit",
+              "5"
+            ]
+          ]
+        },
+        {
+          "headers": [
+            "Validation",
+            "Gap",
+            "Method",
+            "Training Period",
+            "Holdout Period",
+            "Testing"
+          ],
+          "index": 3,
+          "rows": [
+            [
+              "Validation"
+            ],
+            [
+              "Gap",
+              "52 weeks"
+            ],
+            [
+              "Method",
+              "Basic Holdout"
+            ],
+            [
+              "Training Period",
+              "13.5 years"
+            ],
+            [
+              "Holdout Period",
+              "12 months"
+            ],
+            [
+              "Testing",
+              "No"
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/overview"
+    },
+    {
+      "name": "dataset",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Target & Universe",
+        "Normalization",
+        "Period",
+        "Features",
+        "Target",
+        "3MTotReturn",
+        "Target Normalization",
+        "Date",
+        "Training Universe",
+        "No OTC Exchange + min 10 mil No Finance2",
+        "Benchmark",
+        "S&P 500 (SPY:USA)",
+        "Prediction Universe",
+        "Must be the same as training universe",
+        "No restrictions (advanced)",
+        "Currency",
+        "USD",
+        "Additional Universe Rules",
+        "Minimum Liquidity",
+        "10000 USD",
+        "Minimum Price",
+        "0.5 USD",
+        "Minimum Price Bars",
+        "260",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Target",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Target Normalization",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Training Universe",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Benchmark",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Prediction Universe",
+          "value": ""
+        },
+        {
+          "checked": true,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "false"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Must be the same as training universe",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "true"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "No restrictions (advanced)",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Currency",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Minimum Liquidity",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Minimum Price",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Minimum Price Bars",
+          "value": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/general",
+          "text": "Target & Universe"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/normalization",
+          "text": "Normalization"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/period",
+          "text": "Period"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/features",
+          "text": "Features"
+        },
+        {
+          "href": "/app/universe/summary/320031",
+          "text": "No OTC Exchange + min 10 mil No Finance2"
+        },
+        {
+          "href": "/sv/aiFactor/27238/dataset/general",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/dataset/general",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/dataset/general",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/dataset/general",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/dataset/general",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/general",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/dataset/general",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/dataset/general",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/dataset/general",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/dataset/general",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/dataset/general",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/dataset/general",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/dataset/general",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/dataset/general",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/dataset/general",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/dataset/general"
+    },
+    {
+      "name": "dataset_features",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Target & Universe",
+        "Normalization",
+        "Period",
+        "Features",
+        "Normalization: Z-Score",
+        "87 Features",
+        "1/5",
+        "20",
+        "50",
+        "100",
+        "ALL",
+        "Name",
+        "Normalization",
+        "Formula",
+        "Tag",
+        "1-year Beta",
+        "Skip + Date",
+        "BetaFunc(1,250) // calculated with daily returns",
+        "3MoPctRet",
+        "Skip + Date",
+        "Close(0) / Close(60)",
+        "3MoRet3MoAgo",
+        "Skip + Date",
+        "Close(60) / Close(120)",
+        "3MoRet6MoAgo",
+        "Skip + Date",
+        "Close(120) / Close(180)",
+        "3MoRet9MoAgo",
+        "Skip + Date",
+        "Close(180) / Close(240)",
+        "120",
+        "Skip + Date",
+        "close(0)/close(120)",
+        "140",
+        "Skip + Date",
+        "close(0)/close(140)",
+        "160",
+        "Skip + Date",
+        "close(0)/close(160)",
+        "180",
+        "Skip + Date",
+        "close(0)/close(180)",
+        "AvgRec",
+        "Skip + Date",
+        "AvgRec",
+        "Beta3Y",
+        "Skip + Date",
+        "Beta3Y",
+        "Beta5Y",
+        "Skip + Date",
+        "Beta5Y",
+        "Chaikin Acc/Dist",
+        "Skip + Date",
+        "ChaikinAD(21,0)>0",
+        "Chaikin Money Flow ROC",
+        "Skip + Date",
+        "ChaikinAD(7,0)/ChaikinAD(21,0)",
+        "Chaikin Trend Indicator",
+        "Skip + Date",
+        "Close(0)/ChaikinTrend(42,0,5)",
+        "Changes in Recommendation",
+        "Skip + Date",
+        "AvgRec- AvgRec4WkAgo",
+        "consistent EPS growth",
+        "Skip + Date",
+        "LoopSum(\"EPSExclXor(Ctr,Qtr) > EPSExclXor(Ctr+4,Qtr)\",6,0) // In how many of the last six quarters did the stock's EPS exceed its EPS a year earlier? The more, the better.",
+        "Earnings Estimate Revision",
+        "Skip + Date",
+        "NextFYEPSMean - NextFYEPS13WkAgo",
+        "Earnings Yield",
+        "Skip + Date",
+        "EarnYield",
+        "EBITDA / EV",
+        "Skip + Date",
+        "OpIncBDeprTTM / EV",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Power search...",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "SELECT",
+          "text": "20 50 100 ALL",
+          "value": "20"
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/general",
+          "text": "Target & Universe"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/normalization",
+          "text": "Normalization"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/period",
+          "text": "Period"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/features",
+          "text": "Features"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/normalization",
+          "text": "Z-Score"
+        },
+        {
+          "href": "/sv/aiFactor/27238/dataset/features",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/dataset/features",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/dataset/features",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/dataset/features",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/dataset/features",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset/features",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/dataset/features",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/dataset/features",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/dataset/features",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/dataset/features",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/dataset/features",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/dataset/features",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/dataset/features",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/dataset/features",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/dataset/features",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Name Normalization",
+            "Formula",
+            "Tag",
+            ""
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "Name Normalization",
+              "Formula",
+              "Tag",
+              ""
+            ],
+            [
+              "1-year Beta Skip + Date",
+              "BetaFunc(1,250) // calculated with daily returns",
+              "",
+              ""
+            ],
+            [
+              "3MoPctRet Skip + Date",
+              "Close(0) / Close(60)",
+              "",
+              ""
+            ],
+            [
+              "3MoRet3MoAgo Skip + Date",
+              "Close(60) / Close(120)",
+              "",
+              ""
+            ],
+            [
+              "3MoRet6MoAgo Skip + Date",
+              "Close(120) / Close(180)",
+              "",
+              ""
+            ],
+            [
+              "3MoRet9MoAgo Skip + Date",
+              "Close(180) / Close(240)",
+              "",
+              ""
+            ],
+            [
+              "120 Skip + Date",
+              "close(0)/close(120)",
+              "",
+              ""
+            ],
+            [
+              "140 Skip + Date",
+              "close(0)/close(140)",
+              "",
+              ""
+            ],
+            [
+              "160 Skip + Date",
+              "close(0)/close(160)",
+              "",
+              ""
+            ],
+            [
+              "180 Skip + Date",
+              "close(0)/close(180)",
+              "",
+              ""
+            ],
+            [
+              "AvgRec Skip + Date",
+              "AvgRec",
+              "",
+              ""
+            ],
+            [
+              "Beta3Y Skip + Date",
+              "Beta3Y",
+              "",
+              ""
+            ],
+            [
+              "Beta5Y Skip + Date",
+              "Beta5Y",
+              "",
+              ""
+            ],
+            [
+              "Chaikin Acc/Dist Skip + Date",
+              "ChaikinAD(21,0)>0",
+              "",
+              ""
+            ],
+            [
+              "Chaikin Money Flow ROC Skip + Date",
+              "ChaikinAD(7,0)/ChaikinAD(21,0)",
+              "",
+              ""
+            ],
+            [
+              "Chaikin Trend Indicator Skip + Date",
+              "Close(0)/ChaikinTrend(42,0,5)",
+              "",
+              ""
+            ],
+            [
+              "Changes in Recommendation Skip + Date",
+              "AvgRec- AvgRec4WkAgo",
+              "",
+              ""
+            ],
+            [
+              "consistent EPS growth Skip + Date",
+              "LoopSum(\"EPSExclXor(Ctr,Qtr) > EPSExclXor(Ctr+4,Qtr)\",6,0) // In how many of the last six quarters did the stock's EPS exceed its EPS a year earlier? The more, the better.",
+              "",
+              ""
+            ],
+            [
+              "Earnings Estimate Revision Skip + Date",
+              "NextFYEPSMean - NextFYEPS13WkAgo",
+              "",
+              ""
+            ],
+            [
+              "Earnings Yield Skip + Date",
+              "EarnYield",
+              "",
+              ""
+            ],
+            [
+              "EBITDA / EV Skip + Date",
+              "OpIncBDeprTTM / EV",
+              "",
+              ""
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/dataset/features"
+    },
+    {
+      "name": "validation_method",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Method",
+        "Models",
+        "Dataset Period",
+        "15.5 years (2010-01-01 to 2025-06-21)",
+        "Gap",
+        "52 weeks",
+        "Validation Method",
+        "Basic Holdout",
+        "Training Period",
+        "13.5 years",
+        "Holdout Period",
+        "12 months",
+        "Testing",
+        "No",
+        "2000",
+        "2002",
+        "2004",
+        "2006",
+        "2008",
+        "2010",
+        "2012",
+        "2014",
+        "2016",
+        "2018",
+        "2020",
+        "2022",
+        "2024",
+        "2026",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "745.64",
+        "S&P 500 (SPY:USA)",
+        "Dataset",
+        "Validation - Training",
+        "Validation - Holdout",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Dataset Period",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Gap",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Validation Method",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Training Period",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Holdout Period",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Testing",
+          "value": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/method",
+          "text": "Method"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/models",
+          "text": "Models"
+        },
+        {
+          "href": "/sv/aiFactor/27238/validation/method",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/validation/method",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/validation/method",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/validation/method",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/validation/method",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/method",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/validation/method",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/validation/method",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/validation/method",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/validation/method",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/validation/method",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/validation/method",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/validation/method",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/validation/method",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/validation/method",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/validation/method"
+    },
+    {
+      "name": "validation_models",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Method",
+        "Models",
+        "Add Model(s)",
+        "Add Grid",
+        "Filters:",
+        "All Statuses",
+        "All Algorithms",
+        "1/1",
+        "20",
+        "50",
+        "100",
+        "ALL",
+        "Model",
+        "details",
+        "Rank",
+        "Validation",
+        "Resource Units",
+        "Update Date",
+        "extra trees I",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t23\tSUCCESS",
+        "Basic: 3 min, 49 sec (1.7 GB)",
+        "1\t10/21/2025",
+        "extra trees I - gotlessp",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t11\tSUCCESS",
+        "Basic: 57 sec (1.7 GB)",
+        "1\t10/21/2025",
+        "extra trees II",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t82\tSUCCESS",
+        "Basic: 13 min, 10 sec (1.7 GB)",
+        "1\t10/21/2025",
+        "extra trees III",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t82\tSUCCESS",
+        "Basic: 54 min, 22 sec (2.7 GB)",
+        "1\t10/21/2025",
+        "extra trees III - Deepseek",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t5\tSUCCESS",
+        "Basic: 5 min, 51 sec (1.8 GB)",
+        "1\t10/21/2025",
+        "extra trees III - GPT",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t88\tSUCCESS",
+        "Basic: 44 min, 48 sec (1.8 GB)",
+        "1\t10/21/2025",
+        "extra trees III - TOF",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t82\tSUCCESS",
+        "Basic: 12 min, 57 sec (2.0 GB)",
+        "1\t10/21/2025",
+        "extra trees medium 4 #2",
+        "𝒇𝒙",
+        "#random #multithreaded",
+        "Predefined\tshow\t100\tSUCCESS",
+        "Basic: 28 min, 14 sec (1.8 GB)",
+        "3\t4/16/2026",
+        "extra trees medium 4",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t94\tSUCCESS",
+        "Basic: 28 min, 9 sec (1.8 GB)",
+        "1\t10/21/2025",
+        "lightgbm I",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t47\tSUCCESS",
+        "Basic: 42 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t17\tSUCCESS",
+        "Basic: 1 min, 17 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II - deepseek",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t35\tSUCCESS",
+        "Basic: 1 min, 37 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II - deepseek 3",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t58\tSUCCESS",
+        "Basic: 4 min, 41 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II - GPT 6/6",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t41\tSUCCESS",
+        "Basic: 3 min, 21 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II - GPT1",
+        "𝑓𝑥",
+        "Custom\tshow\t64\tSUCCESS",
+        "Basic: 1 min, 56 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm II - TOF",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Custom\tshow\t52\tSUCCESS",
+        "Basic: 2 min, 13 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "lightgbm III",
+        "𝑓𝑥",
+        "#random #multithreaded",
+        "Predefined\tshow\t29\tSUCCESS",
+        "Basic: 2 min, 23 sec (2.4 GB)",
+        "1\t10/21/2025",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Power search...",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "SELECT",
+          "text": "20 50 100 ALL",
+          "value": "20"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/method",
+          "text": "Method"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/models",
+          "text": "Models"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676742",
+          "text": "extra trees I"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676746",
+          "text": "extra trees I - gotlessp"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676738",
+          "text": "extra trees II"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676740",
+          "text": "extra trees III"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676736",
+          "text": "extra trees III - Deepseek"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676732",
+          "text": "extra trees III - GPT"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676734",
+          "text": "extra trees III - TOF"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=1027500",
+          "text": "extra trees medium 4 #2"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676744",
+          "text": "extra trees medium 4"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676720",
+          "text": "lightgbm I"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676718",
+          "text": "lightgbm II"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676726",
+          "text": "lightgbm II - deepseek"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676728",
+          "text": "lightgbm II - deepseek 3"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676730",
+          "text": "lightgbm II - GPT 6/6"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676722",
+          "text": "lightgbm II - GPT1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676724",
+          "text": "lightgbm II - TOF"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676716",
+          "text": "lightgbm III"
+        },
+        {
+          "href": "/sv/aiFactor/27238/validation/models",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/validation/models",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/validation/models",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/validation/models",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/validation/models",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation/models",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/validation/models",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/validation/models",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/validation/models",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/validation/models",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/validation/models",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/validation/models",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/validation/models",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/validation/models",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/validation/models",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "",
+            "",
+            "Model",
+            "details",
+            "Rank",
+            "Validation",
+            "Resource Units",
+            "Update Date"
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "",
+              "",
+              "Model",
+              "details",
+              "Rank",
+              "Validation",
+              "Resource Units",
+              "Update Date"
+            ],
+            [
+              "",
+              "",
+              "extra trees I 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "23",
+              "SUCCESS Basic: 3 min, 49 sec (1.7 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees I - gotlessp 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "11",
+              "SUCCESS Basic: 57 sec (1.7 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees II 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "82",
+              "SUCCESS Basic: 13 min, 10 sec (1.7 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees III 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "82",
+              "SUCCESS Basic: 54 min, 22 sec (2.7 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - Deepseek 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "5",
+              "SUCCESS Basic: 5 min, 51 sec (1.8 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - GPT 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "88",
+              "SUCCESS Basic: 44 min, 48 sec (1.8 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - TOF 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "82",
+              "SUCCESS Basic: 12 min, 57 sec (2.0 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees medium 4 #2 𝒇𝒙 #random #multithreaded Predefined",
+              "show",
+              "100",
+              "SUCCESS Basic: 28 min, 14 sec (1.8 GB)",
+              "3",
+              "4/16/2026"
+            ],
+            [
+              "",
+              "",
+              "extra trees medium 4 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "94",
+              "SUCCESS Basic: 28 min, 9 sec (1.8 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm I 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "47",
+              "SUCCESS Basic: 42 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "17",
+              "SUCCESS Basic: 1 min, 17 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - deepseek 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "35",
+              "SUCCESS Basic: 1 min, 37 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - deepseek 3 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "58",
+              "SUCCESS Basic: 4 min, 41 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - GPT 6/6 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "41",
+              "SUCCESS Basic: 3 min, 21 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - GPT1 𝑓𝑥 Custom",
+              "show",
+              "64",
+              "SUCCESS Basic: 1 min, 56 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - TOF 𝑓𝑥 #random #multithreaded Custom",
+              "show",
+              "52",
+              "SUCCESS Basic: 2 min, 13 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm III 𝑓𝑥 #random #multithreaded Predefined",
+              "show",
+              "29",
+              "SUCCESS Basic: 2 min, 23 sec (2.4 GB)",
+              "1",
+              "10/21/2025"
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/validation/models"
+    },
+    {
+      "name": "predictors",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Predictors",
+        "Predict",
+        "Importance",
+        "Add Predictor",
+        "Filters:",
+        "All Statuses",
+        "All Algorithms",
+        "1/1",
+        "20",
+        "50",
+        "100",
+        "ALL",
+        "Name",
+        "details\tTraining Period",
+        "Train",
+        "Resource Units",
+        "Update Date",
+        "extra trees III - TOF",
+        "𝒇𝒙",
+        "#random #multithreaded",
+        "Custom\tshow\t2005-01-01 to 2020-05-01\tSUCCESS",
+        "Basic: 11 min, 31 sec (1.7 GB)",
+        "7\t10/21/2025",
+        "extra trees medium 4",
+        "𝒇𝒙",
+        "#random #multithreaded",
+        "Predefined\tshow\t2010-01-01 to 2025-06-21\tSUCCESS",
+        "Basic: 18 min, 43 sec (1.9 GB)",
+        "4\t1/18/2026",
+        "lightgbm II - GPT 6/6",
+        "𝒇𝒙",
+        "#random #multithreaded",
+        "Custom\tshow\t2005-01-01 to 2020-01-01\tSUCCESS",
+        "Basic: 2 min, 22 sec (2.0 GB)",
+        "1\t10/21/2025",
+        "lightgbm medium 3",
+        "𝒇𝒙",
+        "#random #multithreaded",
+        "Predefined\tshow\t2005-01-01 to 2020-01-01\tSUCCESS",
+        "Basic: 1 min, 47 sec (2.0 GB)",
+        "1\t10/21/2025",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Power search...",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "SELECT",
+          "text": "20 50 100 ALL",
+          "value": "20"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predictors",
+          "text": "Predictors"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predict",
+          "text": "Predict"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/importance",
+          "text": "Importance"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predict?id=676748",
+          "text": "extra trees III - TOF"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predict?id=826884",
+          "text": "extra trees medium 4"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predict?id=676749",
+          "text": "lightgbm II - GPT 6/6"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predict?id=676750",
+          "text": "lightgbm medium 3"
+        },
+        {
+          "href": "/sv/aiFactor/27238/prediction/predictors",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/prediction/predictors",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/prediction/predictors",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/prediction/predictors",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/prediction/predictors",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction/predictors",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/prediction/predictors",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/prediction/predictors",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/prediction/predictors",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/prediction/predictors",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/prediction/predictors",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/prediction/predictors",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/prediction/predictors",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/prediction/predictors",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/prediction/predictors",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "",
+            "",
+            "Name",
+            "details",
+            "Training Period",
+            "Train",
+            "Resource Units",
+            "Update Date"
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "",
+              "",
+              "Name",
+              "details",
+              "Training Period",
+              "Train",
+              "Resource Units",
+              "Update Date"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - TOF 𝒇𝒙 #random #multithreaded Custom",
+              "show",
+              "2005-01-01 to 2020-05-01",
+              "SUCCESS Basic: 11 min, 31 sec (1.7 GB)",
+              "7",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "extra trees medium 4 𝒇𝒙 #random #multithreaded Predefined",
+              "show",
+              "2010-01-01 to 2025-06-21",
+              "SUCCESS Basic: 18 min, 43 sec (1.9 GB)",
+              "4",
+              "1/18/2026"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - GPT 6/6 𝒇𝒙 #random #multithreaded Custom",
+              "show",
+              "2005-01-01 to 2020-01-01",
+              "SUCCESS Basic: 2 min, 22 sec (2.0 GB)",
+              "1",
+              "10/21/2025"
+            ],
+            [
+              "",
+              "",
+              "lightgbm medium 3 𝒇𝒙 #random #multithreaded Predefined",
+              "show",
+              "2005-01-01 to 2020-01-01",
+              "SUCCESS Basic: 1 min, 47 sec (2.0 GB)",
+              "1",
+              "10/21/2025"
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/prediction/predictors"
+    },
+    {
+      "name": "results_compare",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Compare All",
+        "Lift",
+        "Portfolio",
+        "Return",
+        "Rank (Columns)",
+        "Edit",
+        "Portfolio Settings",
+        "Quantiles 10 Slippage 0.1%",
+        "Opens Portfolio Settings dialog to change Quantiles and Slippage",
+        "Algorithm",
+        "All",
+        "Filter",
+        "Accuracy\tH−L\tHigh\tLow",
+        "Model",
+        "Rank",
+        "RMSE",
+        "Spearman",
+        "Avg%",
+        "SR",
+        "SD",
+        "Avg%",
+        "SR",
+        "SD",
+        "Turn%",
+        "Avg%",
+        "SR",
+        "SD",
+        "Turn%",
+        "extra trees medium 4 #2\t100\t1.6371\t0.1671\t58.86\t1.50\t31.06\t31.03\t1.11\t24.52\t567\t-17.66\t-0.42\t45.92\t667",
+        "extra trees medium 4\t94\t1.6373\t0.1671\t66.83\t1.73\t29.79\t33.78\t1.18\t24.76\t550\t-19.98\t-0.49\t45.47\t669",
+        "extra trees III - GPT\t88\t1.6371\t0.1681\t56.27\t1.38\t32.59\t29.69\t1.06\t24.62\t511\t-17.14\t-0.40\t46.62\t577",
+        "extra trees III\t82\t1.6379\t0.1621\t57.14\t1.65\t27.52\t30.99\t1.08\t25.05\t665\t-16.77\t-0.41\t44.26\t754",
+        "extra trees II\t82\t1.6374\t0.1676\t55.98\t1.38\t32.44\t27.39\t1.00\t24.32\t528\t-18.47\t-0.43\t46.95\t576",
+        "extra trees III - TOF\t82\t1.6373\t0.1680\t55.80\t1.37\t32.46\t27.83\t1.00\t24.56\t565\t-18.09\t-0.43\t46.69\t606",
+        "lightgbm II - GPT1\t64\t1.6372\t0.1564\t49.30\t1.38\t29.09\t24.93\t0.86\t25.94\t945\t-16.44\t-0.40\t45.18\t703",
+        "lightgbm II - deepseek 3\t58\t1.6393\t0.1503\t62.91\t1.93\t25.40\t30.34\t0.92\t28.82\t1,179\t-20.16\t-0.52\t43.59\t812",
+        "lightgbm II - TOF\t52\t1.6389\t0.1519\t58.57\t1.78\t25.94\t26.65\t0.86\t27.46\t1,147\t-20.29\t-0.52\t43.64\t810",
+        "lightgbm I\t47\t1.6377\t0.1534\t51.71\t1.47\t28.55\t25.10\t0.84\t26.66\t979\t-17.67\t-0.43\t45.14\t744",
+        "lightgbm II - GPT 6/6\t41\t1.6380\t0.1544\t53.70\t1.52\t28.38\t30.74\t0.99\t27.01\t999\t-15.05\t-0.36\t45.10\t736",
+        "lightgbm II - deepseek\t35\t1.6406\t0.1484\t58.34\t1.82\t25.31\t30.83\t0.97\t27.78\t1,193\t-17.51\t-0.43\t44.38\t833",
+        "lightgbm III\t29\t1.6380\t0.1546\t46.01\t1.32\t28.82\t31.85\t1.05\t26.41\t907\t-9.77\t-0.23\t45.32\t720",
+        "extra trees I\t23\t1.6389\t0.1669\t36.54\t0.90\t34.61\t24.85\t0.94\t23.62\t574\t-8.61\t-0.19\t47.77\t551",
+        "lightgbm II\t17\t1.6399\t0.1488\t43.84\t1.37\t26.66\t24.89\t0.80\t27.72\t1,145\t-13.26\t-0.31\t45.16\t807",
+        "extra trees I - gotlessp\t11\t1.6439\t0.1692\t35.80\t0.83\t36.98\t22.69\t0.91\t22.63\t781\t-9.71\t-0.21\t48.82\t597",
+        "extra trees III - Deepseek\t5\t1.6476\t0.1673\t31.03\t0.69\t39.04\t20.95\t0.96\t19.91\t609\t-7.73\t-0.17\t48.68\t544",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Rank (Columns)",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Portfolio Settings",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Algorithm",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Filter",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Power search...",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Selected",
+          "value": "on"
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/compare",
+          "text": "Compare All"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift",
+          "text": "Lift"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/portfolio",
+          "text": "Portfolio"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/return",
+          "text": "Return"
+        },
+        {
+          "href": "/app/help?url=%2Fai-factor%2Fai-algorithms",
+          "text": ""
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=1027500",
+          "text": "extra trees medium 4 #2"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676744",
+          "text": "extra trees medium 4"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676732",
+          "text": "extra trees III - GPT"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676740",
+          "text": "extra trees III"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676738",
+          "text": "extra trees II"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676734",
+          "text": "extra trees III - TOF"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676722",
+          "text": "lightgbm II - GPT1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676728",
+          "text": "lightgbm II - deepseek 3"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676724",
+          "text": "lightgbm II - TOF"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676720",
+          "text": "lightgbm I"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676730",
+          "text": "lightgbm II - GPT 6/6"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676726",
+          "text": "lightgbm II - deepseek"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676716",
+          "text": "lightgbm III"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676742",
+          "text": "extra trees I"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676718",
+          "text": "lightgbm II"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676746",
+          "text": "extra trees I - gotlessp"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift?id=676736",
+          "text": "extra trees III - Deepseek"
+        },
+        {
+          "href": "/sv/aiFactor/27238/results/compare",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/results/compare",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/results/compare",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/results/compare",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/results/compare",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/compare",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/results/compare",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/results/compare",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/results/compare",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/results/compare",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/results/compare",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/results/compare",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/results/compare",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/results/compare",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/results/compare",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "",
+            "Accuracy",
+            "H−L",
+            "High",
+            "Low",
+            "",
+            "",
+            "Model",
+            "Rank",
+            "RMSE",
+            "Spearman",
+            "Avg%",
+            "SR",
+            "SD",
+            "Avg%",
+            "SR",
+            "SD",
+            "Turn%",
+            "Avg%",
+            "SR",
+            "SD",
+            "Turn%"
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "",
+              "Accuracy",
+              "H−L",
+              "High",
+              "Low"
+            ],
+            [
+              "",
+              "",
+              "Model",
+              "Rank",
+              "RMSE",
+              "Spearman",
+              "Avg%",
+              "SR",
+              "SD",
+              "Avg%",
+              "SR",
+              "SD",
+              "Turn%",
+              "Avg%",
+              "SR",
+              "SD",
+              "Turn%"
+            ],
+            [
+              "",
+              "",
+              "extra trees medium 4 #2",
+              "100",
+              "1.6371",
+              "0.1671",
+              "58.86",
+              "1.50",
+              "31.06",
+              "31.03",
+              "1.11",
+              "24.52",
+              "567",
+              "-17.66",
+              "-0.42",
+              "45.92",
+              "667"
+            ],
+            [
+              "",
+              "",
+              "extra trees medium 4",
+              "94",
+              "1.6373",
+              "0.1671",
+              "66.83",
+              "1.73",
+              "29.79",
+              "33.78",
+              "1.18",
+              "24.76",
+              "550",
+              "-19.98",
+              "-0.49",
+              "45.47",
+              "669"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - GPT",
+              "88",
+              "1.6371",
+              "0.1681",
+              "56.27",
+              "1.38",
+              "32.59",
+              "29.69",
+              "1.06",
+              "24.62",
+              "511",
+              "-17.14",
+              "-0.40",
+              "46.62",
+              "577"
+            ],
+            [
+              "",
+              "",
+              "extra trees III",
+              "82",
+              "1.6379",
+              "0.1621",
+              "57.14",
+              "1.65",
+              "27.52",
+              "30.99",
+              "1.08",
+              "25.05",
+              "665",
+              "-16.77",
+              "-0.41",
+              "44.26",
+              "754"
+            ],
+            [
+              "",
+              "",
+              "extra trees II",
+              "82",
+              "1.6374",
+              "0.1676",
+              "55.98",
+              "1.38",
+              "32.44",
+              "27.39",
+              "1.00",
+              "24.32",
+              "528",
+              "-18.47",
+              "-0.43",
+              "46.95",
+              "576"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - TOF",
+              "82",
+              "1.6373",
+              "0.1680",
+              "55.80",
+              "1.37",
+              "32.46",
+              "27.83",
+              "1.00",
+              "24.56",
+              "565",
+              "-18.09",
+              "-0.43",
+              "46.69",
+              "606"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - GPT1",
+              "64",
+              "1.6372",
+              "0.1564",
+              "49.30",
+              "1.38",
+              "29.09",
+              "24.93",
+              "0.86",
+              "25.94",
+              "945",
+              "-16.44",
+              "-0.40",
+              "45.18",
+              "703"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - deepseek 3",
+              "58",
+              "1.6393",
+              "0.1503",
+              "62.91",
+              "1.93",
+              "25.40",
+              "30.34",
+              "0.92",
+              "28.82",
+              "1,179",
+              "-20.16",
+              "-0.52",
+              "43.59",
+              "812"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - TOF",
+              "52",
+              "1.6389",
+              "0.1519",
+              "58.57",
+              "1.78",
+              "25.94",
+              "26.65",
+              "0.86",
+              "27.46",
+              "1,147",
+              "-20.29",
+              "-0.52",
+              "43.64",
+              "810"
+            ],
+            [
+              "",
+              "",
+              "lightgbm I",
+              "47",
+              "1.6377",
+              "0.1534",
+              "51.71",
+              "1.47",
+              "28.55",
+              "25.10",
+              "0.84",
+              "26.66",
+              "979",
+              "-17.67",
+              "-0.43",
+              "45.14",
+              "744"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - GPT 6/6",
+              "41",
+              "1.6380",
+              "0.1544",
+              "53.70",
+              "1.52",
+              "28.38",
+              "30.74",
+              "0.99",
+              "27.01",
+              "999",
+              "-15.05",
+              "-0.36",
+              "45.10",
+              "736"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II - deepseek",
+              "35",
+              "1.6406",
+              "0.1484",
+              "58.34",
+              "1.82",
+              "25.31",
+              "30.83",
+              "0.97",
+              "27.78",
+              "1,193",
+              "-17.51",
+              "-0.43",
+              "44.38",
+              "833"
+            ],
+            [
+              "",
+              "",
+              "lightgbm III",
+              "29",
+              "1.6380",
+              "0.1546",
+              "46.01",
+              "1.32",
+              "28.82",
+              "31.85",
+              "1.05",
+              "26.41",
+              "907",
+              "-9.77",
+              "-0.23",
+              "45.32",
+              "720"
+            ],
+            [
+              "",
+              "",
+              "extra trees I",
+              "23",
+              "1.6389",
+              "0.1669",
+              "36.54",
+              "0.90",
+              "34.61",
+              "24.85",
+              "0.94",
+              "23.62",
+              "574",
+              "-8.61",
+              "-0.19",
+              "47.77",
+              "551"
+            ],
+            [
+              "",
+              "",
+              "lightgbm II",
+              "17",
+              "1.6399",
+              "0.1488",
+              "43.84",
+              "1.37",
+              "26.66",
+              "24.89",
+              "0.80",
+              "27.72",
+              "1,145",
+              "-13.26",
+              "-0.31",
+              "45.16",
+              "807"
+            ],
+            [
+              "",
+              "",
+              "extra trees I - gotlessp",
+              "11",
+              "1.6439",
+              "0.1692",
+              "35.80",
+              "0.83",
+              "36.98",
+              "22.69",
+              "0.91",
+              "22.63",
+              "781",
+              "-9.71",
+              "-0.21",
+              "48.82",
+              "597"
+            ],
+            [
+              "",
+              "",
+              "extra trees III - Deepseek",
+              "5",
+              "1.6476",
+              "0.1673",
+              "31.03",
+              "0.69",
+              "39.04",
+              "20.95",
+              "0.96",
+              "19.91",
+              "609",
+              "-7.73",
+              "-0.17",
+              "48.68",
+              "544"
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/results/compare"
+    },
+    {
+      "name": "results_return",
+      "bodyLines": [
+        "MANAGE",
+        "RESEARCH",
+        "CHARTS",
+        "MODELS",
+        "RESOURCES",
+        "Symbols, accounts, watchlists (Ctrl+K)",
+        "AI FACTORS",
+        "AI Factor Base 87 Features Andreas 2",
+        "Private",
+        "Edit Details",
+        "Overview",
+        "Dataset",
+        "Load",
+        "Validation",
+        "Results",
+        "Prediction",
+        "Compare All",
+        "Lift",
+        "Portfolio",
+        "Return",
+        "All",
+        "Rank",
+        "extra trees II",
+        "82",
+        "extra trees III",
+        "82",
+        "extra trees I",
+        "24",
+        "lightgbm I",
+        "47",
+        "lightgbm II",
+        "18",
+        "lightgbm III",
+        "29",
+        "extra trees medium 4 #2",
+        "100",
+        "extra trees medium 4",
+        "94",
+        "lightgbm II - GPT1",
+        "65",
+        "extra trees I - gotlessp",
+        "12",
+        "extra trees III - GPT",
+        "88",
+        "lightgbm II - TOF",
+        "53",
+        "extra trees III - TOF",
+        "82",
+        "lightgbm II - deepseek",
+        "35",
+        "lightgbm II - deepseek 3",
+        "59",
+        "extra trees III - Deepseek",
+        "6",
+        "lightgbm II - GPT 6/6",
+        "41",
+        "extra trees medium 4 #2",
+        "2024-06-21 to 2025-06-21",
+        "Annualized Returns by Quantile",
+        "Total Returns",
+        "Excess vs. Universe",
+        "Excess vs. Benchmark",
+        "Bench 15.00",
+        "Univ 9.10",
+        "-25.88​-25.88",
+        "27.19​27.19",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "-40",
+        "-20",
+        "0",
+        "20",
+        "40",
+        "Return Statistics",
+        "Entire Period",
+        "6/22/2024 to 6/28/2025",
+        "First Half",
+        "6/22/2024 to 12/27/2024",
+        "Second Half",
+        "12/28/2024 to 6/28/2025",
+        "Bucket 10 Compounded",
+        "27.19%\t55.90%\t2.96%",
+        "Average\t31.03%\t59.76%\t6.57%",
+        "Estimate\t20.59%\t37.82%\t5.08%",
+        "Avg Stocks\t198\t202\t194",
+        "Annualized Turnover\t567%\t546%\t590%",
+        "Bucket 1 Compounded",
+        "-25.88%\t-4.85%\t-42.82%",
+        "Average\t-17.66%\t5.65%\t-36.52%",
+        "Estimate\t-2.18%\t7.08%\t-9.85%",
+        "Avg Stocks\t199\t203\t195",
+        "Annualized Turnover\t667%\t654%\t681%",
+        "rs - Spearman's Rank Correlation Coefficient\t0.38\t0.55\t-0.15",
+        "r - Pearson Correlation Coefficient\t0.53\t0.56\t0.32",
+        "Slope (change per quantile)\t2.530%\t3.415%\t1.659%",
+        "X Intercept\t1.86\t-1.07\t6.94",
+        "Average Number of Stocks in Buckets",
+        "Jul 2024",
+        "Aug 2024",
+        "Sep 2024",
+        "Oct 2024",
+        "Nov 2024",
+        "Dec 2024",
+        "Jan 2025",
+        "Feb 2025",
+        "Mar 2025",
+        "Apr 2025",
+        "May 2025",
+        "Jun 2025",
+        "180",
+        "190",
+        "200",
+        "210",
+        "P123 AI Factors",
+        "2",
+        "AI Factors",
+        "15",
+        "Andreas Models",
+        "3",
+        "Unclassified",
+        "12",
+        "agent_highsr_lgbm_sp500_v1",
+        "agent_ml_2003_87f_v1",
+        "agent_ml_v2_150f",
+        "agent_ml_v3_lgbm",
+        "agent_OpenCLI_SP500_1MRel_v1",
+        "AI Factor Base 87 Features Andreas 2",
+        "AI Factor Enhanced 150+ Features ExtraTrees v1",
+        "SCs Small and Micro Cap Focus + 10 Mil min Replic2",
+        "SP500_Alpha_MaxSharpe_3M_v1",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials",
+        "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm",
+        "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials",
+        "Group AI Factors",
+        "3",
+        "Andreas Group Invest",
+        "3",
+        "Advanced Features (<50)",
+        "AI Factor Base 87 Features Andreas - Group",
+        "SCs Small and Micro Cap Focus + 10 Mil min vol",
+        "⦀",
+        "Copyright © 2026 FactSet Research Systems Inc. All rights reserved. | Data provided by ICE Data, LLP"
+      ],
+      "fields": [
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "Power search...",
+          "value": ""
+        },
+        {
+          "checked": true,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "total"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Total Returns",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "excessUniv"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Excess vs. Universe",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "excessBench"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Excess vs. Benchmark",
+          "value": ""
+        },
+        {
+          "checked": true,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "whole"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Entire Period",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "firstHalf"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "First Half",
+          "value": ""
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "INPUT",
+          "text": "",
+          "value": "secondHalf"
+        },
+        {
+          "checked": false,
+          "selected": false,
+          "tag": "LABEL",
+          "text": "Second Half",
+          "value": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "/app",
+          "text": ""
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": null,
+          "text": "MANAGE"
+        },
+        {
+          "href": "/app/dashboard",
+          "text": "Dashboard"
+        },
+        {
+          "href": "/app/account",
+          "text": "Trading Accounts"
+        },
+        {
+          "href": "/app/investment",
+          "text": "Strategies"
+        },
+        {
+          "href": "/app/watchlist",
+          "text": "Watchlists"
+        },
+        {
+          "href": "/app/earnings",
+          "text": "Earnings Center"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addSingle",
+          "text": "Add Transaction"
+        },
+        {
+          "href": "/app/dashboard?tradeMenu=addMultiple",
+          "text": "Add Transactions"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": "Activity"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": null,
+          "text": "RESEARCH"
+        },
+        {
+          "href": "/app/opener/SCR",
+          "text": "Screens"
+        },
+        {
+          "href": "/app/opener/RPT?cat=-2",
+          "text": "Screen Reports"
+        },
+        {
+          "href": "/app/opener/PTF",
+          "text": "Live & Simulated Strategies"
+        },
+        {
+          "href": "/app/opener/BOOK",
+          "text": "Live & Simulated Books"
+        },
+        {
+          "href": "/app/opener/UNIV?cat=-2",
+          "text": "Universes"
+        },
+        {
+          "href": "/app/opener/FORM?cat=-2",
+          "text": "Formulas"
+        },
+        {
+          "href": "/app/opener/LIST",
+          "text": "Lists"
+        },
+        {
+          "href": "/app/opener/RNK",
+          "text": "Ranking Systems"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI Factors"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Series"
+        },
+        {
+          "href": "/app/opener/DATASERIES?cat=-2",
+          "text": "Imported Data Series"
+        },
+        {
+          "href": "/app/opener/STOCKFACTOR?cat=-2",
+          "text": "Imported Stock Factors"
+        },
+        {
+          "href": "/sv/account-settings/dataminer-api",
+          "text": "DataMiner & API"
+        },
+        {
+          "href": "/app/dashboard?stockCompare",
+          "text": "Compare Stocks"
+        },
+        {
+          "href": "/app/opener/ROLL",
+          "text": "Rolling Tests"
+        },
+        {
+          "href": "/app/opener/STD",
+          "text": "Optimizer Studies"
+        },
+        {
+          "href": "/sv/opener/FACTORLIST/-2",
+          "text": "Download Factors"
+        },
+        {
+          "href": null,
+          "text": "CHARTS"
+        },
+        {
+          "href": "/app/stock/snapshot",
+          "text": "Snapshot"
+        },
+        {
+          "href": "/app/stock?tab=fundamentalChart",
+          "text": "Fundamental Chart"
+        },
+        {
+          "href": "/app/stock?tab=timeline",
+          "text": "Timeline"
+        },
+        {
+          "href": "/app/stock/rank",
+          "text": "Rank Chart"
+        },
+        {
+          "href": "/app/stock/chart",
+          "text": "Technical Chart"
+        },
+        {
+          "href": "/app/report/panels",
+          "text": "Panels"
+        },
+        {
+          "href": "/app/stock/insiders",
+          "text": "Insiders"
+        },
+        {
+          "href": "/fed_model.jsp",
+          "text": "Equity Risk Premium"
+        },
+        {
+          "href": "/app/opener/MKTIND?cat=-2",
+          "text": "Macro Chart"
+        },
+        {
+          "href": "/app/opener/SERIES?cat=-2",
+          "text": "Aggregate Chart"
+        },
+        {
+          "href": "/app/multi",
+          "text": "Multi Chart"
+        },
+        {
+          "href": "/app/taxonomy",
+          "text": "Industry & Sector Heatmap"
+        },
+        {
+          "href": null,
+          "text": "MODELS"
+        },
+        {
+          "href": "/app/investment/add-new?browse=1",
+          "text": "Portfolio123 Models"
+        },
+        {
+          "href": "/app/r2g",
+          "text": "Designer Models"
+        },
+        {
+          "href": "/app/r2g/myr2g",
+          "text": "My Subscriptions"
+        },
+        {
+          "href": null,
+          "text": "RESOURCES"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2F",
+          "text": "Latest Posts"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fcategories",
+          "text": "Forum Categories"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fsearch%3Fexpanded%3Dtrue",
+          "text": "Search"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fu%2Fewswlw%2Factivity",
+          "text": "My Activity"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Ffeature-requests%2F19",
+          "text": "Feature Requests"
+        },
+        {
+          "href": "/app/groups",
+          "text": "Groups"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/doc/doc_factors.jsp",
+          "text": "Factor Reference"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=63",
+          "text": "Financial Line Items"
+        },
+        {
+          "href": "/doc/side_help_item.jsp?id=100",
+          "text": "A to Z Guide"
+        },
+        {
+          "href": "/app/help?url=/library/deep-dive",
+          "text": "White Papers"
+        },
+        {
+          "href": "/app/help?url=/library/step-by-step-tutorials",
+          "text": "Step by Step Tutorials"
+        },
+        {
+          "href": "/app/webinar",
+          "text": "Webinars"
+        },
+        {
+          "href": "/app/help?url=/library/courses",
+          "text": "Courses"
+        },
+        {
+          "href": "/app/help?url=/library/learn-more",
+          "text": "Learn More"
+        },
+        {
+          "href": "https://portfolio123.customerly.help/en/library/recommended-books",
+          "text": "Books we Recommend"
+        },
+        {
+          "href": "https://blog.portfolio123.com/",
+          "text": "Blog"
+        },
+        {
+          "href": "/app/help?url=/library/recommended-books",
+          "text": "Books We Recommend"
+        },
+        {
+          "href": "/app/notification/messages",
+          "text": "Messages"
+        },
+        {
+          "href": "/app/notification/opinions",
+          "text": "Opinions"
+        },
+        {
+          "href": "/app/notification/notes",
+          "text": "Notes"
+        },
+        {
+          "href": "/app/notification/trash",
+          "text": "Trash"
+        },
+        {
+          "href": "/app/account/trading",
+          "text": ""
+        },
+        {
+          "href": "#",
+          "text": "Chat with us"
+        },
+        {
+          "href": "/contact-us",
+          "text": "Submit a Question"
+        },
+        {
+          "href": "/contact-us?ticket",
+          "text": "Submit Support Ticket"
+        },
+        {
+          "href": "https://calendly.com/portfolio123meeting",
+          "text": "Schedule a Call or Demo"
+        },
+        {
+          "href": "/consulting-services",
+          "text": "Consulting Services"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Flatest-release%2F9",
+          "text": "What's New"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2F18%2Fl%2Flatest%3Fboard%3Ddefault",
+          "text": "Product Roadmap"
+        },
+        {
+          "href": "/app/help",
+          "text": "Knowledge Base"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/sv/account-settings/referral-affiliate",
+          "text": "Referral / Affiliate Program"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62925",
+          "text": "How I Invest Picking Stocks As A Quantitative Microcap Investor"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62812",
+          "text": "Trust Pilot: Excellent (4.6)"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62811",
+          "text": "Portfolio123 Review DayTradeReview"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62810",
+          "text": "Portfolio123 Review DAYTRADINGZ.com"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=/t/62809",
+          "text": "Should You Buy It Liberated Stock Trader"
+        },
+        {
+          "href": "https://community.portfolio123.com/session/sso?return_path=%2Fc%2Freviews%2F17%3Forder%3Dcreated",
+          "text": "View All"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": ""
+        },
+        {
+          "href": "/sv/account-settings/preferences/countryCurrency",
+          "text": "United States"
+        },
+        {
+          "href": "/sv/account-settings",
+          "text": "Account Settings"
+        },
+        {
+          "href": "/sv/account-settings/billing",
+          "text": "Billing"
+        },
+        {
+          "href": "/sv/register",
+          "text": "Pricing"
+        },
+        {
+          "href": "/mvnforum/pubprofile?member=ewswlw",
+          "text": "Public Profile"
+        },
+        {
+          "href": "/app/r2g/myr2g?view=models",
+          "text": "Designer Dashboard"
+        },
+        {
+          "href": "/app/auth2fact/set",
+          "text": "Set up 2FA"
+        },
+        {
+          "href": "/app/auth/logout",
+          "text": "Log Out"
+        },
+        {
+          "href": "/sv/opener/AIFACTOR/-2",
+          "text": "AI FACTORS"
+        },
+        {
+          "href": "",
+          "text": "Save As"
+        },
+        {
+          "href": "/sv/aiFactor/20015/overview",
+          "text": "Overview"
+        },
+        {
+          "href": "/sv/aiFactor/20015/dataset",
+          "text": "Dataset"
+        },
+        {
+          "href": "/sv/aiFactor/20015/load",
+          "text": "Load"
+        },
+        {
+          "href": "/sv/aiFactor/20015/validation",
+          "text": "Validation"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results",
+          "text": "Results"
+        },
+        {
+          "href": "/sv/aiFactor/20015/prediction",
+          "text": "Prediction"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/compare",
+          "text": "Compare All"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/lift",
+          "text": "Lift"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/portfolio",
+          "text": "Portfolio"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/return",
+          "text": "Return"
+        },
+        {
+          "href": "/sv/aiFactor/27238/results/return",
+          "text": "agent_highsr_lgbm_sp500_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26875/results/return",
+          "text": "agent_ml_2003_87f_v1"
+        },
+        {
+          "href": "/sv/aiFactor/26878/results/return",
+          "text": "agent_ml_v2_150f"
+        },
+        {
+          "href": "/sv/aiFactor/26889/results/return",
+          "text": "agent_ml_v3_lgbm"
+        },
+        {
+          "href": "/sv/aiFactor/27641/results/return",
+          "text": "agent_OpenCLI_SP500_1MRel_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20015/results/return",
+          "text": "AI Factor Base 87 Features Andreas 2"
+        },
+        {
+          "href": "/sv/aiFactor/20101/results/return",
+          "text": "AI Factor Enhanced 150+ Features ExtraTrees v1"
+        },
+        {
+          "href": "/sv/aiFactor/27417/results/return",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min Replic2"
+        },
+        {
+          "href": "/sv/aiFactor/20717/results/return",
+          "text": "SP500_Alpha_MaxSharpe_3M_v1"
+        },
+        {
+          "href": "/sv/aiFactor/20719/results/return",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20721/results/return",
+          "text": "SP500_Alpha_MaxSharpe_6M_NoFinancials_MediumTerm"
+        },
+        {
+          "href": "/sv/aiFactor/20725/results/return",
+          "text": "SP500_Alpha_MediumTerm_MaxSharpe_NoFinancials"
+        },
+        {
+          "href": "/sv/aiFactor/20136/results/return",
+          "text": "Advanced Features (<50)"
+        },
+        {
+          "href": "/sv/aiFactor/19031/results/return",
+          "text": "AI Factor Base 87 Features Andreas - Group"
+        },
+        {
+          "href": "/sv/aiFactor/10866/results/return",
+          "text": "SCs Small and Micro Cap Focus + 10 Mil min vol"
+        },
+        {
+          "href": "https://www.factset.com/products-data/data-solutions",
+          "text": "Copyright © 2026 FactSet Research Systems Inc. All rights reserved."
+        },
+        {
+          "href": "https://www.theice.com/market-data",
+          "text": "Data provided by ICE Data, LLP"
+        },
+        {
+          "href": "#",
+          "text": ""
+        }
+      ],
+      "tables": [
+        {
+          "headers": [
+            "Return Statistics",
+            "Entire Period 6/22/2024 to 6/28/2025",
+            "First Half 6/22/2024 to 12/27/2024",
+            "Second Half 12/28/2024 to 6/28/2025"
+          ],
+          "index": 0,
+          "rows": [
+            [
+              "Return Statistics",
+              "Entire Period 6/22/2024 to 6/28/2025",
+              "First Half 6/22/2024 to 12/27/2024",
+              "Second Half 12/28/2024 to 6/28/2025"
+            ],
+            [
+              "Bucket 10 Compounded",
+              "27.19%",
+              "55.90%",
+              "2.96%"
+            ],
+            [
+              "Average",
+              "31.03%",
+              "59.76%",
+              "6.57%"
+            ],
+            [
+              "Estimate",
+              "20.59%",
+              "37.82%",
+              "5.08%"
+            ],
+            [
+              "Avg Stocks",
+              "198",
+              "202",
+              "194"
+            ],
+            [
+              "Annualized Turnover",
+              "567%",
+              "546%",
+              "590%"
+            ],
+            [
+              "Bucket 1 Compounded",
+              "-25.88%",
+              "-4.85%",
+              "-42.82%"
+            ],
+            [
+              "Average",
+              "-17.66%",
+              "5.65%",
+              "-36.52%"
+            ],
+            [
+              "Estimate",
+              "-2.18%",
+              "7.08%",
+              "-9.85%"
+            ],
+            [
+              "Avg Stocks",
+              "199",
+              "203",
+              "195"
+            ],
+            [
+              "Annualized Turnover",
+              "667%",
+              "654%",
+              "681%"
+            ],
+            [
+              "rs - Spearman's Rank Correlation Coefficient",
+              "0.38",
+              "0.55",
+              "-0.15"
+            ],
+            [
+              "r - Pearson Correlation Coefficient",
+              "0.53",
+              "0.56",
+              "0.32"
+            ],
+            [
+              "Slope (change per quantile)",
+              "2.530%",
+              "3.415%",
+              "1.659%"
+            ],
+            [
+              "X Intercept",
+              "1.86",
+              "-1.07",
+              "6.94"
+            ]
+          ]
+        }
+      ],
+      "title": "AI Factor Base 87 Features Andreas 2 - AI Factor - Portfolio123",
+      "url": "https://www.portfolio123.com/sv/aiFactor/20015/results/return"
+    }
+  ]
+}

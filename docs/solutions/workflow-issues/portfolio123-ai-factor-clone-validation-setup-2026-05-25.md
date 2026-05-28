@@ -22,6 +22,12 @@ tags:
   - saved-predictions
   - basic-holdout
   - browser-automation
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-25
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 AI Factor Clone Validation Setup Workflow."
 ---
 
 # Portfolio123 AI Factor Clone Validation Setup Workflow
@@ -220,3 +226,9 @@ P123 shows this dataset load as 21 Resource Units. It is not displayed as a doll
   - `p123-output/native_strategy_ai_base87_2024_oos_baseline_20260525.md`
 - Portfolio123 skill: `C:/Users/Eddy/.codex/skills/portfolio123/SKILL.md`
 - Portfolio123 AI Factor guide: `C:/Users/Eddy/.codex/skills/portfolio123/ai-factor-guide.md`
+
+---
+
+## Tags
+
+#portfolio123 #ai-factor #validation #clone-workflow #resource-units #saved-predictions #basic-holdout #browser-automation #algo-trading/portfolio123 #work/solutions #work/workflow-issues

@@ -19,6 +19,12 @@ tags:
   - encrypted-secrets
   - dpapi
   - credential-handling
+  - algo-trading/portfolio123
+  - work/solutions
+  - work/workflow-issues
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 workflow learning that records the issue, fix, and reuse guidance for Portfolio123 Browser Login with Encrypted Project Credentials."
 ---
 
 # Portfolio123 Browser Login with Encrypted Project Credentials
@@ -110,3 +116,9 @@ Use the comparison result only as a boolean, such as `Portfolio123WebCredentials
 - `AGENTS.md` section `Authentication And Secrets`
 - `scripts/Import-Portfolio123Secrets.ps1`
 - `docs/solutions/workflow-issues/portfolio123-browser-navigation-ai-factors-2026-05-16.md`
+
+---
+
+## Tags
+
+#portfolio123 #authentication #browser-plugin #encrypted-secrets #dpapi #credential-handling #algo-trading/portfolio123 #work/solutions #work/workflow-issues

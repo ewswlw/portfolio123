@@ -1,4 +1,12 @@
-Created: 2026-05-22 14:56 America/New_York
+---
+title: "Native P123 Strategy Book Validation Manual Handoff"
+tags:
+  - algo-trading/portfolio123
+  - work/brainstorming
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 brainstorming note for Native P123 Strategy Book Validation Manual Handoff."
+---
 
 # Native P123 Strategy Book Validation Manual Handoff
 
@@ -156,3 +164,9 @@ Existing native simulated books already come close to the target. The closest in
 ### Deferred to Planning
 
 - Determine the exact Portfolio123 UI surface for expressing a 200-day timing overlay without introducing lookahead or same-period signal use.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/brainstorming

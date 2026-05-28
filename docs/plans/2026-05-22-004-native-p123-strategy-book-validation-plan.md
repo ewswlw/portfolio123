@@ -1,4 +1,12 @@
-Created: 2026-05-22 15:03 America/New_York
+---
+title: "Native P123 Strategy Book Validation Plan"
+tags:
+  - algo-trading/portfolio123
+  - work/plans
+created: 2026-05-22
+updated: 2026-05-28
+description: "Portfolio123 implementation plan covering scope, workflow, validation, and deliverables for Native P123 Strategy Book Validation Plan."
+---
 
 # Native P123 Strategy Book Validation Plan
 
@@ -269,3 +277,9 @@ If native setup cannot represent the timing overlay:
 - The result is labeled with the correct validation tier.
 - The timing warmup/start-date interpretation is explicit.
 - No native performance target is claimed unless the native Strategy Book result passes all three gates.
+
+---
+
+## Tags
+
+#algo-trading/portfolio123 #work/plans
