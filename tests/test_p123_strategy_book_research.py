@@ -27,6 +27,9 @@ class P123StrategyBookResearchTest(unittest.TestCase):
         research.TODAY = self.old_today
         self.tmp.cleanup()
 
+    def output_path(self, stem: str, suffix: str = "csv") -> Path:
+        return research.output_dir_for_stem(stem) / f"{stem}_20260522.{suffix}"
+
     def write_return_panel(self) -> Path:
         dates = pd.bdate_range("2006-01-02", periods=360)
         rows = []
@@ -44,8 +47,8 @@ class P123StrategyBookResearchTest(unittest.TestCase):
                     "strategy_1": 0.0015 if i < 240 else -0.001,
                 }
             )
-        path = research.OUTPUT_DIR / "return_panel_20260522.csv"
-        research.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        path = self.output_path("return_panel")
+        path.parent.mkdir(parents=True, exist_ok=True)
         pd.DataFrame(rows).to_csv(path, index=False)
         return path
 
@@ -62,7 +65,7 @@ class P123StrategyBookResearchTest(unittest.TestCase):
 
     def test_init_dynamic_goal_writes_artifact_and_iteration_entry(self):
         research.init_dynamic_goal("20260522")
-        path = research.OUTPUT_DIR / "dynamic_goal_strategy_book_20260522.json"
+        path = self.output_path("dynamic_goal_strategy_book", "json")
         payload = json.loads(path.read_text(encoding="utf-8"))
         self.assertEqual(payload["thresholds"]["sharpe_min"], 2.0)
         self.assertIn("U1 Dynamic Goal", research.ITERATION_LOG.read_text(encoding="utf-8"))
@@ -70,8 +73,8 @@ class P123StrategyBookResearchTest(unittest.TestCase):
     def test_build_timing_signals_uses_shifted_benchmark_data(self):
         return_file = self.write_return_panel()
         research.build_timing_signals(return_file, "20260522")
-        signal_path = research.OUTPUT_DIR / "timing_signal_panel_20260522.csv"
-        summary_path = research.OUTPUT_DIR / "timing_signal_summary_20260522.json"
+        signal_path = self.output_path("timing_signal_panel")
+        summary_path = self.output_path("timing_signal_summary", "json")
         signals = pd.read_csv(signal_path)
         summary = json.loads(summary_path.read_text(encoding="utf-8"))
         self.assertFalse(signals.empty)
@@ -82,15 +85,28 @@ class P123StrategyBookResearchTest(unittest.TestCase):
     def test_build_dynamic_panel_adds_timed_and_tactical_components(self):
         return_file = self.write_return_panel()
         research.build_timing_signals(return_file, "20260522")
-        timing_file = research.OUTPUT_DIR / "timing_signal_panel_20260522.csv"
+        timing_file = self.output_path("timing_signal_panel")
         research.build_dynamic_panel(return_file, timing_file, "20260522")
-        dynamic = pd.read_csv(research.OUTPUT_DIR / "dynamic_return_panel_20260522.csv")
-        candidates = pd.read_csv(research.OUTPUT_DIR / "tactical_etf_component_candidates_20260522.csv")
+        dynamic = pd.read_csv(self.output_path("dynamic_return_panel"))
+        candidates = pd.read_csv(self.output_path("tactical_etf_component_candidates"))
         self.assertIn("strategy_1_timed_200d", dynamic.columns)
         self.assertIn("strategy_1_timed_ensemble", dynamic.columns)
         self.assertIn("conditional_inverse_sleeve", dynamic.columns)
         self.assertIn("tactical_etf_component", dynamic.columns)
         self.assertFalse(candidates.empty)
+
+    def test_latest_file_prefers_task_folder_and_falls_back_to_flat_root(self):
+        research.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        subdir = research.output_dir_for_stem("return_panel")
+        subdir.mkdir(parents=True, exist_ok=True)
+        flat = research.OUTPUT_DIR / "return_panel_20260521.csv"
+        nested = subdir / "return_panel_20260522.csv"
+        flat.write_text("flat\n", encoding="utf-8")
+        nested.write_text("nested\n", encoding="utf-8")
+        self.assertEqual(research.latest_file("return_panel", "csv"), nested)
+
+        nested.unlink()
+        self.assertEqual(research.latest_file("return_panel", "csv"), flat)
 
 
 if __name__ == "__main__":

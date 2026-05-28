@@ -24,6 +24,8 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "p123-output"
+STRATEGY_BOOK_API_OUTPUT_DIR = "strategy-book-api-research"
+STRATEGY_BOOK_NATIVE_OUTPUT_DIR = "strategy-book-native-validation"
 ITERATION_LOG = ROOT / "iteration.md"
 TODAY = date.today().strftime("%Y%m%d")
 
@@ -220,9 +222,21 @@ def ensure_output_dir() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def output_subdir_for_stem(stem: str) -> str:
+    if stem.startswith("native_"):
+        return STRATEGY_BOOK_NATIVE_OUTPUT_DIR
+    return STRATEGY_BOOK_API_OUTPUT_DIR
+
+
+def output_dir_for_stem(stem: str) -> Path:
+    return OUTPUT_DIR / output_subdir_for_stem(stem)
+
+
 def dated_path(stem: str, suffix: str, run_date: str = TODAY) -> Path:
     ensure_output_dir()
-    return OUTPUT_DIR / f"{stem}_{run_date}.{suffix}"
+    target_dir = output_dir_for_stem(stem)
+    target_dir.mkdir(parents=True, exist_ok=True)
+    return target_dir / f"{stem}_{run_date}.{suffix}"
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -516,7 +530,10 @@ def get_p123_client() -> Any:
 
 
 def latest_file(stem: str, suffix: str) -> Path:
-    matches = sorted(OUTPUT_DIR.glob(f"{stem}_*.{suffix}"))
+    pattern = f"{stem}_*.{suffix}"
+    matches = sorted(output_dir_for_stem(stem).glob(pattern))
+    if not matches:
+        matches = sorted(OUTPUT_DIR.glob(pattern))
     if not matches:
         raise FileNotFoundError(f"No output matching {stem}_*.{suffix}")
     return matches[-1]
